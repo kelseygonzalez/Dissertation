@@ -1,0 +1,52 @@
+\begin{table}[!h]
+
+\caption{\label{tab:google-tab}Linear Mixed Effects Regression Results for Stay-At-Home Rates}
+\centering
+\fontsize{8}{10}\selectfont
+\begin{tabular}[t]{lccc}
+\toprule
+  & Model 1 & Model 2 & Model 3\\
+\midrule
+Percent White & \num{0.088}*** & \num{0.058}** & \num{0.060}**\\
+ & (\num{0.023}) & (\num{0.019}) & (\num{0.019})\\
+Percent College Graduates & \num{-0.016} & \num{0.010} & \num{0.020}\\
+ & (\num{0.028}) & (\num{0.023}) & (\num{0.024})\\
+Percent over 65 & \num{-0.034}+ & \num{-0.031}* & \num{-0.037}*\\
+ & (\num{0.018}) & (\num{0.015}) & (\num{0.015})\\
+Median Income & \num{-0.042} & \num{-0.032} & \num{0.015}\\
+ & (\num{0.030}) & (\num{0.024}) & (\num{0.025})\\
+Monthly Unemployment Rate & \num{0.087}*** & \num{0.012}*** & \num{0.065}***\\
+ & (\num{0.003}) & (\num{0.003}) & (\num{0.004})\\
+Percent of GOP votes, 2016 & \num{0.077}* & \num{0.043} & \num{0.017}\\
+ & (\num{0.032}) & (\num{0.026}) & (\num{0.027})\\
+Percent Evangelical Christian & \num{-0.016} & \num{-0.008} & \num{-0.014}\\
+ & (\num{0.022}) & (\num{0.018}) & (\num{0.019})\\
+'Fox News' Trend & \num{-0.030}*** & \num{-0.028}*** & \num{-0.026}***\\
+ & (\num{0.001}) & (\num{0.001}) & \vphantom{1} (\num{0.001})\\
+'Social Distancing' Trend & \num{0.011}*** & \num{0.004}* & \num{0.001}\\
+ & (\num{0.002}) & (\num{0.002}) & \vphantom{1} (\num{0.002})\\
+'Covid Conspiracy' Trend & \num{0.024}*** & \num{0.006}*** & \num{0.010}***\\
+ & (\num{0.002}) & (\num{0.002}) & (\num{0.002})\\
+Covid Case Rate & \num{0.000} & \num{-0.009}* & \num{-0.007}+\\
+ & (\num{0.004}) & (\num{0.004}) & (\num{0.004})\\
+Week Number & \num{-0.002}+ & \num{-0.002}* & \num{-0.004}***\\
+ & (\num{0.001}) & (\num{0.001}) & (\num{0.001})\\
+Stay at Home Rate, county mean & \num{0.898}*** & \num{0.873}*** & \num{0.846}***\\
+ & (\num{0.059}) & (\num{0.048}) & (\num{0.050})\\
+Signal &  & \num{0.473}*** & \num{0.550}***\\
+ &  & (\num{0.005}) & (\num{0.008})\\
+Signal x Week &  & \num{-0.016}*** & \num{-0.018}***\\
+ &  & (\num{0.000}) & (\num{0.000})\\
+Signal Discordance &  &  & \num{-0.101}***\\
+ &  &  & (\num{0.004})\\
+Signal x Signal Discordance &  &  & \num{-0.092}***\\
+ &  &  & (\num{0.002})\\
+\midrule
+Log.Lik. & \num{-23007.044} & \num{-19555.920} & \num{-18655.837}\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}N = 57,356, N of random Effects = 1375}\\
+\multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ .05. ** p $<$ .01. *** p $<$ .001 (two-tailed test).}\\
+\multicolumn{4}{l}{\rule{0pt}{1em}Model 1 includes a random intercept for FIPS,}\\
+\multicolumn{4}{l}{\rule{0pt}{1em}Models 2-3 include a random effect for Movement Signal by FIPS}\\
+\end{tabular}
+\end{table}

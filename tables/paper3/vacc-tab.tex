@@ -1,0 +1,52 @@
+\begin{table}[!h]
+
+\caption{\label{tab:vacc-tab}Linear Mixed Effects Regression Results for Vaccination Rates}
+\centering
+\fontsize{8}{10}\selectfont
+\begin{tabular}[t]{lccc}
+\toprule
+  & Model 1 & Model 2 & Model 3\\
+\midrule
+Percent White & \num{0.023}+ & \num{-0.029}*** & \num{-0.027}***\\
+ & (\num{0.012}) & (\num{0.003}) & (\num{0.003})\\
+Percent College Graduates & \num{-0.004} & \num{0.009}* & \num{0.010}*\\
+ & (\num{0.013}) & (\num{0.004}) & (\num{0.004})\\
+Percent over 65 & \num{-0.012} & \num{-0.002} & \num{0.000}\\
+ & (\num{0.008}) & (\num{0.002}) & (\num{0.002})\\
+Median Income & \num{0.002} & \num{-0.017}*** & \num{-0.016}***\\
+ & (\num{0.011}) & (\num{0.003}) & (\num{0.003})\\
+Monthly Unemployment Rate & \num{-0.031}*** & \num{-0.014}*** & \num{-0.013}***\\
+ & (\num{0.001}) & (\num{0.001}) & (\num{0.001})\\
+Percent of GOP votes, 2020 & \num{-0.070}*** & \num{0.031}*** & \num{0.028}***\\
+ & (\num{0.014}) & (\num{0.004}) & (\num{0.004})\\
+Percent Evangelical Christian & \num{0.000} & \num{0.000} & \num{-0.001}\\
+ & (\num{0.009}) & (\num{0.003}) & (\num{0.003})\\
+'Fox News' Trend & \num{0.002}*** & \num{0.000} & \num{0.000}*\\
+ & (\num{0.000}) & (\num{0.000}) & \vphantom{4} (\num{0.000})\\
+'Vaccine' Trend & \num{-0.001}*** & \num{0.000} & \num{0.000}+\\
+ & (\num{0.000}) & (\num{0.000}) & \vphantom{3} (\num{0.000})\\
+'Covid Conspiracy' Trend & \num{0.000}* & \num{0.001}*** & \num{0.001}***\\
+ & (\num{0.000}) & (\num{0.000}) & \vphantom{2} (\num{0.000})\\
+Covid Case Rate & \num{-0.008}*** & \num{0.001}*** & \num{0.001}***\\
+ & (\num{0.000}) & (\num{0.000}) & \vphantom{1} (\num{0.000})\\
+Week Number & \num{0.067}*** & \num{0.011}*** & \num{0.011}***\\
+ & (\num{0.000}) & (\num{0.000}) & (\num{0.000})\\
+Vaccination Rate, county mean & \num{0.800}*** & \num{0.201}*** & \num{0.170}***\\
+ & (\num{0.018}) & (\num{0.005}) & (\num{0.005})\\
+Vaccination Signal &  & \num{0.854}*** & \num{0.865}***\\
+ &  & (\num{0.005}) & (\num{0.006})\\
+Vaccination Signal x Week &  & \num{-0.005}*** & \num{-0.003}***\\
+ &  & (\num{0.000}) & (\num{0.000})\\
+Vaccination Discordance &  &  & \num{-0.072}***\\
+ &  &  & \vphantom{1} (\num{0.002})\\
+Vaccination Signal x Discordance &  &  & \num{-0.051}***\\
+ &  &  & (\num{0.002})\\
+\midrule
+Log.Lik. & \num{118677.013} & \num{160000.978} & \num{160638.703}\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}N = 99,890, N of random Effects = 2819}\\
+\multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ .05. ** p $<$ .01. *** p $<$ .001 (two-tailed test).}\\
+\multicolumn{4}{l}{\rule{0pt}{1em}Model 1 includes a random intercept for FIPS,}\\
+\multicolumn{4}{l}{\rule{0pt}{1em}Models 2-3 include a random effect for Movement Signal by FIPS}\\
+\end{tabular}
+\end{table}

@@ -158,6 +158,10 @@
 \setlength{\textwidth}{5.9in}		% should be 6in  but we're being 
 									% conservative, just to be safe.
 			
+% define tightlist
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
 
 % Make sure that various key names are in all caps.
 \renewcommand{\partname}{PART}
@@ -818,7 +822,7 @@ Date
 	{Couldn't find #1.tex to include as your abstract.}
 
 }
-\afterpage{\blankpage}
+
 
 %%---------------------------- Table of Contents ----------------------
 %% 
@@ -887,8 +891,8 @@ Date
 	\markboth{\protect\raisebox{-0.5in}{{\emph{\listfigurename} -- Continued}\hspace{1.5in}} }{
 			  \protect\raisebox{-0.5in}{\hspace{1.5in}{\emph{\listfigurename} -- Continued}} }
 
-	%\addcontentsline{toc}{chapter}{\listfigurename} % remove from TOC
-    %\@starttoc{lof}%
+	\addcontentsline{toc}{chapter}{\listfigurename} % remove from TOC
+    \@starttoc{lof}%
     \if@restonecol\twocolumn\fi
 }
 }
@@ -920,8 +924,8 @@ Date
 	\markboth{\protect\raisebox{-0.5in}{{\emph{\listtablename} -- Continued}\hspace{1.5in}} }{
 			  \protect\raisebox{-0.5in}{\hspace{1.5in}{\emph{\listtablename} -- Continued}} }
 
-	%\addcontentsline{toc}{chapter}{\listtablename}  % remove from TOC
-    % \@starttoc{lot}%  % remove from TOC
+	\addcontentsline{toc}{chapter}{\listtablename}  % remove from TOC
+     \@starttoc{lot}%  % remove from TOC
     \if@restonecol\twocolumn\fi
 }
 
