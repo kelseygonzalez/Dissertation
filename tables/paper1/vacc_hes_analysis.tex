@@ -1,6 +1,41 @@
 \begin{table}[!h]
-\caption{\label{tab:vacc_hes_analysis}}
+
+\caption{\label{tab:vacc_hes_analysis}Linear Regression Results for Vaccine Hesitancy}
 \centering
-\begin{tabular}[t]{}
+\fontsize{8}{10}\selectfont
+
+\begin{tabular}{lccc}
+\toprule
+  & Model 1 & Model 2 & Model 3\\
+\midrule
+
+covid\_19\_vaccine & \num{-0.006}+ &  & \num{-0.011}**\\
+ & (\num{0.004}) &  & (\num{0.003})\\
+vaccine & \num{0.021}*** &  & \num{0.023}***\\
+ & (\num{0.005}) &  & (\num{0.005})\\
+coronavirus\_disease & \num{-0.037}*** &  & \num{-0.027}***\\
+ & (\num{0.003}) &  & (\num{0.003})\\
+coronavirus\_virus & \num{-0.003}* &  & \num{0.000}\\
+ & (\num{0.001}) &  & (\num{0.001})\\
+total\_pop &  & \num{-0.005}*** & \num{-0.004}***\\
+ &  & (\num{0.001}) & \vphantom{5} (\num{0.001})\\
+pop\_density &  & \num{-0.004}*** & \num{-0.003}***\\
+ &  & (\num{0.001}) & \vphantom{4} (\num{0.001})\\
+unemployment\_rate &  & \num{-0.002}* & \num{0.000}\\
+ &  & (\num{0.001}) & \vphantom{3} (\num{0.001})\\
+over\_65 &  & \num{-0.013}*** & \num{-0.010}***\\
+ &  & (\num{0.001}) & \vphantom{2} (\num{0.001})\\
+poverty\_rate &  & \num{0.005}** & \num{0.004}**\\
+ &  & (\num{0.002}) & (\num{0.001})\\
+median\_income &  & \num{-0.021}*** & \num{-0.016}***\\
+ &  & (\num{0.001}) & \vphantom{1} (\num{0.001})\\
+broadband &  & \num{-0.008}*** & \num{-0.005}***\\
+ &  & (\num{0.001}) & (\num{0.001})\\
+\midrule
+Num.Obs. & \num{3148} & \num{3133} & \num{3133}\\
+R2 & \num{0.233} & \num{0.350} & \num{0.411}\\
+R2 Adj. & \num{0.232} & \num{0.349} & \num{0.409}\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ .05. ** p $<$ .01. *** p $<$ .001 (two-tailed test).}\\
 \end{tabular}
 \end{table}

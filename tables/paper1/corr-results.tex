@@ -1,6 +1,35 @@
+\renewcommand*{\arraystretch}{1.1}
+
 \begin{table}[!h]
-\caption{\label{tab:corr-results}}
+\caption{\label{tab:corr-results}Correlation Results}
 \centering
-\begin{tabular}[t]{}
-\end{tabular}
+\fontsize{8}{10}\selectfont
+
+\begin{tabularx}{\linewidth}{@{}LLLLLLL@{}}
+\toprule
+\textbf{Measure} & \textbf{Variable} &  \multicolumn{5}{c}{\textbf{Google Trend}}  \\\midrule
+\multicolumn{7}{l}{\textbf{Vaccine Hesitancy}} \\
+ &  & Covid-19 vaccine & Coronavirus (Disease) & Coronavirus (Virus) & Vaccine &  \\
+\textit{Pearson's R} & Vaccine Hesitancy & -0.3866 & -0.4657 & -0.3561 & -0.3994 &  \\
+\multicolumn{7}{l}{\textbf{Mask Attitudes}} \\
+ &  & Coronavirus (Disease) & Coronavirus (Virus) & Cloth Face Mask & Mask & Civil and Political Rights \\
+\textit{Pearson's R} & Mask Rare & -0.1398 & -0.1343 & 0.146 & 0.1339 & -0.1175 \\
+\multicolumn{7}{l}{\textbf{Covid Rates}} \\
+ &  & Covid-19 & Smell Loss & Taste Loss &  &  \\
+\textit{Pearson's R} & Covid Rate & -0.1012 & 0.2835 & 0.2851 &  &  \\
+\textit{repeated measures correlation} & Covid Rate & -0.099*** & 0.322*** & 0.313*** &  &  \\
+\multicolumn{7}{l}{\textbf{Suicide Rates}} \\
+ &  & Suicide & Depression & Suicide Hotline &  &  \\
+\textit{Pearson's R} & Suicide Rate & 0.0845 & 0.0273 & 0.0618 &  &  \\
+\textit{repeated measures correlation} & Suicide Rate & 0.055*** & 0.142*** & 0.131*** &  &  \\
+\multicolumn{7}{l}{\textbf{2016 Presidential Votes}} \\
+ &  & Hilary Clinton & Donald Trump &  &  &  \\
+\textit{Pearson's R} & 2016 Votes for Clinton & -0.1663 & 0.1663 &  &  &  \\
+\textit{Pearson's R} & 2016 Votes for Trump & 0.1682 & -0.1682 &  &  &  \\
+\multicolumn{7}{l}{\textbf{2020 Presidential Votes}} \\
+ &  & Joe Biden & Donald Trump &  &  &  \\
+\textit{Pearson's R} & 2020 Votes for Biden & -0.0286 & 0.0286 &  &  &  \\
+\textit{Pearson's R} & 2020 Votes for Trump & 0.0356 & -0.0356 &  &  & \\
+\bottomrule
+\end{tabularx}
 \end{table}

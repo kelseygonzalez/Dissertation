@@ -1,6 +1,39 @@
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+	
+\definecolor{Gray}{gray}{0.9}
+\definecolor{lightblue}{HTML}{bad7db}
+
+\renewcommand{\arraystretch}{1.2}
+
 \begin{table}[!h]
-\caption{\label{tab:data-sources-table}}
+\caption{\label{tab:data-sources-table}Data Sources}
 \centering
-\begin{tabular}[t]{}
-\end{tabular}
+\fontsize{8}{10}\selectfont
+\setlength{\extrarowheight}{2pt}
+\begin{tabularx}{\linewidth}{@{}L c c L@{}}
+\toprule
+\textbf{Validated Data Source} & \textbf{Type} & \textbf{Dates} & \textbf{Google Trends Used}\citep{googletrends} \\ \midrule
+% \rowcolor{lightblue}
+\multicolumn{4}{l}{\textbf{Behaviors and Attitudes}} \\\hline
+% General Social Survey & Cross-Sectional & 2010 - 2020 & NA \\
+Vaccine Hesitancy for COVID-19 \citep{vaches_data}& Cross-Sectional & March 3 - 15, 2021 & Search Topics: 'Covid-19 vaccine', 'Coronavirus (Disease)', 'Coronavirus   (Virus)', 'Vaccine' \\
+Mask-Wearing Survey Data \citep{mask_data} & Cross-Sectional & July 2 - 14, 2020 & Search Topics: 'Coronavirus (Disease)', 'Coronavirus (Virus)', 'Cloth   Face Mask', 'Mask', 'Civil and Political Rights' \\
+American National Election Survey \citep{anes_data}& Cross-Sectional & 2020 & NA \\
+% \rowcolor{lightblue}
+\multicolumn{4}{l}{\textbf{Health}} \\\hline
+Covid Rates \citep{covid_data}& Longitudinal & Every Monday, 2020 - 2021 & 'Covid-19', 'Coronavirus', 'Taste Loss', 'Smell Loss' \\
+Suicide Rates \citep{suic_data} & Longitudinal & Yearly 2010-2020 & Search Topics: 'Suicide', 'Depression', Search Term:' Suicide Hotline' \\
+% \rowcolor{lightblue}
+\multicolumn{4}{l}{\textbf{Political}} \\\hline
+American National Election Survey \citep{anes_data}& Cross-Sectional & 2020 & NA \\
+Presidential Election Results \citep{pres_data}& Cross Sectional & 2016 \& 2020 & Search Topics: 'Hilary Clinton', 'Donald Trump', 'Joe Biden' \\ \bottomrule
+\end{tabularx}
 \end{table}
+
+
+
+
+
+
+
+

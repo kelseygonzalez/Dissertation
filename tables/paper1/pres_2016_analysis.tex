@@ -1,6 +1,34 @@
 \begin{table}[!h]
-\caption{\label{tab:pres_2016_analysis}}
+
+\caption{\label{tab:pres_2016_analysis}Linear Regression Results for 2016 Presidential Election Results (Hilary Clinton Shown)}
 \centering
-\begin{tabular}[t]{}
+\fontsize{8}{10}\selectfont
+
+\begin{tabular}{lccc}
+\toprule
+  & Model 1 & Model 2 & Model 3\\
+\midrule
+
+hillary\_clinton\_trend & \num{-0.025}*** &  & \num{-0.019}***\\
+ & (\num{0.003}) &  & (\num{0.002})\\
+total\_pop &  & \num{0.028}*** & \num{0.028}***\\
+ &  & (\num{0.002}) & \vphantom{1} (\num{0.002})\\
+pop\_density &  & \num{0.022}*** & \num{0.022}***\\
+ &  & (\num{0.002}) & (\num{0.002})\\
+unemployment\_rate &  & \num{0.047}*** & \num{0.045}***\\
+ &  & (\num{0.003}) & \vphantom{1} (\num{0.003})\\
+over\_65 &  & \num{-0.012}*** & \num{-0.014}***\\
+ &  & (\num{0.003}) & (\num{0.003})\\
+poverty\_rate &  & \num{0.034}*** & \num{0.034}***\\
+ &  & (\num{0.004}) & \vphantom{1} (\num{0.004})\\
+median\_income &  & \num{0.054}*** & \num{0.052}***\\
+ &  & (\num{0.004}) & (\num{0.004})\\
+\midrule
+Num.Obs. & \num{3147} & \num{3145} & \num{3145}\\
+R2 & \num{0.028} & \num{0.314} & \num{0.329}\\
+R2 Adj. & \num{0.027} & \num{0.313} & \num{0.327}\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}Results predicting Donald J. Trump percentage largely equivalent and available upon request.}\\
+\multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ .05. ** p $<$ .01. *** p $<$ .001 (two-tailed test).}\\
 \end{tabular}
 \end{table}

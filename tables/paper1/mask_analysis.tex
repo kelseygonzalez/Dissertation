@@ -1,6 +1,43 @@
 \begin{table}[!h]
-\caption{\label{tab:mask_analysis}}
+
+\caption{\label{tab:mask_analysis}Linear Regression Results for Rare Mask Usage}
 \centering
-\begin{tabular}[t]{}
+\fontsize{8}{10}\selectfont
+
+\begin{tabular}{lccc}
+\toprule
+  & Model 1 & Model 2 & Model 3\\
+\midrule
+
+coronavirus\_disease & \num{-0.010}*** &  & \num{-0.012}***\\
+ & (\num{0.003}) &  & \vphantom{1} (\num{0.003})\\
+coronavirus\_virus & \num{-0.012}*** &  & \num{-0.001}\\
+ & (\num{0.003}) &  & (\num{0.003})\\
+cloth\_face\_mask & \num{-0.009}* &  & \num{-0.015}***\\
+ & (\num{0.004}) &  & (\num{0.004})\\
+mask & \num{0.025}*** &  & \num{0.023}***\\
+ & (\num{0.004}) &  & (\num{0.003})\\
+civil\_and\_political\_rights & \num{-0.012}*** &  & \num{-0.008}***\\
+ & (\num{0.002}) &  & (\num{0.002})\\
+total\_pop &  & \num{-0.012}*** & \num{-0.011}***\\
+ &  & (\num{0.002}) & \vphantom{3} (\num{0.002})\\
+pop\_density &  & \num{-0.003}+ & \num{-0.004}*\\
+ &  & (\num{0.002}) & \vphantom{2} (\num{0.002})\\
+unemployment\_rate &  & \num{-0.028}*** & \num{-0.024}***\\
+ &  & (\num{0.002}) & \vphantom{1} (\num{0.002})\\
+over\_65 &  & \num{-0.006}** & \num{-0.003}+\\
+ &  & (\num{0.002}) & (\num{0.002})\\
+poverty\_rate &  & \num{-0.010}** & \num{-0.009}**\\
+ &  & (\num{0.003}) & \vphantom{2} (\num{0.003})\\
+median\_income &  & \num{-0.036}*** & \num{-0.030}***\\
+ &  & (\num{0.003}) & \vphantom{1} (\num{0.003})\\
+broadband &  & \num{-0.006}* & \num{-0.007}**\\
+ &  & (\num{0.003}) & (\num{0.003})\\
+\midrule
+Num.Obs. & \num{2964} & \num{3133} & \num{2954}\\
+R2 & \num{0.077} & \num{0.176} & \num{0.203}\\
+R2 Adj. & \num{0.076} & \num{0.174} & \num{0.200}\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ .05. ** p $<$ .01. *** p $<$ .001 (two-tailed test).}\\
 \end{tabular}
 \end{table}

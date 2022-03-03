@@ -1,6 +1,34 @@
 \begin{table}[!h]
-\caption{\label{tab:pres_2020_analysis}}
+
+\caption{\label{tab:pres_2020_analysis}Linear Regression Results for 2020 Presidential Election Results (Joe Biden Shown)}
 \centering
-\begin{tabular}[t]{}
+\fontsize{8}{10}\selectfont
+
+\begin{tabular}{lccc}
+\toprule
+  & Model 1 & Model 2 & Model 3\\
+\midrule
+
+joe\_biden\_trend & \num{-0.005} &  & \num{-0.014}***\\
+ & (\num{0.003}) &  & (\num{0.002})\\
+total\_pop &  & \num{0.030}*** & \num{0.029}***\\
+ &  & (\num{0.003}) & \vphantom{3} (\num{0.003})\\
+pop\_density &  & \num{0.021}*** & \num{0.022}***\\
+ &  & (\num{0.003}) & \vphantom{2} (\num{0.003})\\
+unemployment\_rate &  & \num{0.044}*** & \num{0.044}***\\
+ &  & (\num{0.003}) & \vphantom{1} (\num{0.003})\\
+over\_65 &  & \num{-0.007}* & \num{-0.008}**\\
+ &  & (\num{0.003}) & (\num{0.003})\\
+poverty\_rate &  & \num{0.032}*** & \num{0.033}***\\
+ &  & (\num{0.004}) & \vphantom{1} (\num{0.004})\\
+median\_income &  & \num{0.069}*** & \num{0.070}***\\
+ &  & (\num{0.004}) & (\num{0.004})\\
+\midrule
+Num.Obs. & \num{3118} & \num{3118} & \num{3118}\\
+R2 & \num{0.001} & \num{0.295} & \num{0.303}\\
+R2 Adj. & \num{0.000} & \num{0.294} & \num{0.301}\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}Results predicting Donald J. Trump percentage largely equivalent and available upon request.}\\
+\multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ .05. ** p $<$ .01. *** p $<$ .001 (two-tailed test).}\\
 \end{tabular}
 \end{table}

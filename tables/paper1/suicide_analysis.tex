@@ -1,6 +1,39 @@
 \begin{table}[!h]
-\caption{\label{tab:suicide_analysis}}
+
+\caption{\label{tab:suicide_analysis}Hierarchical Model for Suicide Rates}
 \centering
-\begin{tabular}[t]{}
+\fontsize{8}{10}\selectfont
+
+\begin{tabular}{lccc}
+\toprule
+  & Model 1 & Model 2 & Model 3\\
+\midrule
+
+suicide & \num{-0.001} &  & \num{-0.001}\\
+ & (\num{0.001}) &  & \vphantom{2} (\num{0.001})\\
+depression & \num{-0.001}+ &  & \num{-0.001}\\
+ & (\num{0.001}) &  & \vphantom{1} (\num{0.001})\\
+suicide\_hotline & \num{0.002}*** &  & \num{0.002}***\\
+ & (\num{0.001}) &  & (\num{0.001})\\
+year & \num{0.004}*** & \num{0.005}*** & \num{0.005}***\\
+ & (\num{0.000}) & (\num{0.000}) & (\num{0.000})\\
+total\_pop &  & \num{-0.032}*** & \num{-0.027}**\\
+ &  & (\num{0.010}) & (\num{0.009})\\
+pop\_density &  & \num{-0.037}** & \num{-0.033}**\\
+ &  & (\num{0.011}) & (\num{0.011})\\
+unemployment\_rate &  & \num{-0.001} & \num{-0.001}\\
+ &  & (\num{0.001}) & \vphantom{1} (\num{0.001})\\
+over\_65 &  & \num{-0.010}*** & \num{-0.014}***\\
+ &  & (\num{0.002}) & \vphantom{1} (\num{0.002})\\
+poverty\_rate &  & \num{-0.005}*** & \num{-0.003}**\\
+ &  & (\num{0.001}) & (\num{0.001})\\
+median\_income &  & \num{-0.014}*** & \num{-0.015}***\\
+ &  & (\num{0.002}) & (\num{0.002})\\
+\midrule
+Num.Obs. & \num{30008} & \num{33582} & \num{30001}\\
+R2 Marg. & \num{0.058} & \num{0.582} & \num{0.564}\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}Random intercept per county}\\
+\multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ .05. ** p $<$ .01. *** p $<$ .001 (two-tailed test).}\\
 \end{tabular}
 \end{table}
