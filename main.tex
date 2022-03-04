@@ -28,6 +28,8 @@
 % Package Usage
 % These are the packages that we need
 \usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{transparent}
 %\usepackage{natbib}	% natbib is available on most systems, and is
 					% terribly handy.
 					% If you want to use a different Bibliography package, 
@@ -139,20 +141,17 @@
 {Yotam Shmargad}		% 3rd committee member
 
 % Include the ``Statement by Author'' for Dissertations
-\statementbyauthor
+% \statementbyauthor
 % If this is a Thesis, use the following form, with your thesis director's
 % name and title in the square brackets like so (you should also omit the 
 % approval form insertion above):
-%\statementbyauthor[Kelsey E. Gonzalez\\Professor of Chemistry]
+% \statementbyauthor[Kelsey E. Gonzalez\\Professor of Chemistry]
 
 % Include the ``Acknowledgements''
 \incacknowledgements{acknowledgements}
 
 % Include the ``Dedication''
 \incdedication{dedication}
-
-% Include the ``Abstract''
-\incabstract{abstract}
 
 % Create a ``Table of Contents''
 \tableofcontents
@@ -163,7 +162,8 @@
 % Create a ``List of Tables''
 \listoftables
 
-
+% Include the ``Abstract''
+\incabstract{abstract}
 
 % Include the various chapters
 \begin{refsection} % refsection environment

@@ -577,7 +577,25 @@ THE UNIVERSITY OF ARIZONA
 \renewcommand{\baselinestretch}{1}	% single spaced here
 \small\normalsize	
 
+
+
+
+
+
 \chapter*{THE UNIVERSITY OF ARIZONA\\GRADUATE COLLEGE}
+
+% making watermark for signature page
+% \AddToShipoutPictureBG*{\transparent{0.4}\includegraphics[width=0.9\textwidth]{figs/ua_block_rgb_3.png}}
+
+\AddToShipoutPictureBG*{
+    \put(0,0){
+        \parbox[b][\paperheight]{\paperwidth}{%
+            \vfill\centering
+            {\includegraphics[width=0.8\textwidth]{figs/ua_block_rgb_3 - faded.png}}%
+            \vfill
+        }
+    }
+}
 
 As members of the Dissertation Committee, we certify that we have read the \MakeLowercase{\ThesisType} prepared by \FullName, titled \CompleteTitle~and recommend that it be accepted as fulfilling the \MakeLowercase{\ThesisType} requirement for the Degree of \DegreeName. % NICK EDITED THIS LINE
 
@@ -815,7 +833,7 @@ Date
 
 \chapter*{ABSTRACT}
 % removed abstract from TOC
-% \addcontentsline{toc}{chapter}{ABSTRACT} 
+\addcontentsline{toc}{chapter}{ABSTRACT} 
 
 \InputIfFileExists{#1}
 	{\typeout{Including your file #1.tex as the abstract.}}
