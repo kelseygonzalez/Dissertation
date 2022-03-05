@@ -17,7 +17,8 @@
 % Creative Commons, I (DM) think the CC-BY-ND makes the most sense)  See
 % uathesis.cls for the reason why the non-commercial licenses are not
 % included.
-\documentclass[dissertation]{uathesis}
+\documentclass[dissertation, figuresright]{uathesis}
+
 %\documentclass[dissertation,copyright]{uathesis}
 %\documentclass[dissertation,CC-BY]{uathesis}
 %\documentclass[dissertation,CC-BY-SA]{uathesis}
@@ -29,7 +30,7 @@
 % These are the packages that we need
 \usepackage{graphicx}
 \usepackage{eso-pic}
-\usepackage{transparent}
+
 %\usepackage{natbib}	% natbib is available on most systems, and is
 					% terribly handy.
 					% If you want to use a different Bibliography package, 
@@ -66,7 +67,7 @@
 \usepackage{mathtools}
 \usepackage{bm}
 \usepackage{enumitem}
-\usepackage{units} % includes nicefrac
+% \usepackage{units} % includes nicefrac
 
 %%% The following allows dagger footnote on chapter titles
 %%% with no number. Useful for designating previously 
@@ -89,6 +90,7 @@
 % cross-referenced.
 \usepackage[hidelinks]{hyperref}
 
+\usepackage{microtype}
 \usepackage{siunitx}
 \usepackage{dcolumn}
 \usepackage{caption}
@@ -103,12 +105,7 @@
 \usepackage{tabularx}  
 \usepackage{ragged2e}
 \usepackage{color, colortbl}
-\usepackage[figuresright]{rotating} %https://tex.stackexchange.com/questions/170205/rotate-table-90-degrees-and-stretch-to-fill-whole-page
-
-
-
-
-
+% \usepackage[figuresright]{rotating} %https://tex.stackexchange.com/questions/170205/rotate-table-90-degrees-and-stretch-to-fill-whole-page
 
 % Set up some values.
 \completetitle{Information-Seeking, Online Search Tools, and The Formation of New Norms in Health Behaviors}
@@ -140,14 +137,7 @@
 {Daniel E. Martinez}	% 2nd committee member
 {Yotam Shmargad}		% 3rd committee member
 
-% Include the ``Statement by Author'' for Dissertations
-% \statementbyauthor
-% If this is a Thesis, use the following form, with your thesis director's
-% name and title in the square brackets like so (you should also omit the 
-% approval form insertion above):
-% \statementbyauthor[Kelsey E. Gonzalez\\Professor of Chemistry]
-
-% Include the ``Acknowledgements''
+% % Include the ``Acknowledgements''
 \incacknowledgements{acknowledgements}
 
 % Include the ``Dedication''
