@@ -215,7 +215,7 @@ rescale each longitudinal value, multiply the respective week's rescaling ratio
 by the cross-sectional value. To validate this method, I compared the rescaled
 longitudinal data against multiple samples of time-series data. For a more
 in-depth explanation of this procedure, see \citet[p. 5]{park_etal}. I interpolate 
-missing datapoints in the longitudinal datasets using \texttt{zoo\:\:na\.approx\(\)} \citep{zoo}.
+missing datapoints in the longitudinal datasets using \texttt{na.approx()} \citep{zoo}.
 
 \subsubsection{Attitudinal}
 
@@ -252,15 +252,14 @@ availability in testing as well as different community propensity to test
 Case Rate is measured as number of cases per 100,000 population. Observations
 vary from a minimum of zero to a maximum of 1460.46 for each Monday from January 27, 2020, through
 December 27, 2021. There are 285,986 cases across 3,136 counties and 101
-dates. Missing data were interpolated using \texttt{zoo\:\:na\.approx\(\)} \citep{zoo}.
+dates. Missing data were interpolated using \texttt{na.approx()} \citep{zoo}.
 
 I also use county-level suicide rates from the US Centers for Disease Control
 and Prevention \citeyearpar{suic_data}. Data is grouped by year from 2010-2020. Raw death
 rates are scaled by population size for each year and can be interpreted as the
 death rate by suicide for every one thousand people. There are 34,683 total
 cases, resulting from 10 observations of 3,147 counties. Missing data were interpolated using
-\texttt{zoo\:\:na\.approx\(\)} \citep{zoo}. Measures range from 0.034 to 53.254.
-
+\texttt{na.approx()} \citep{zoo}. Measures range from 0.034 to 53.254.
 
 \subsubsection{Political}
 
