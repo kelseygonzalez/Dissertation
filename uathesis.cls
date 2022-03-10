@@ -54,46 +54,11 @@
 	\renewcommand{\ThesisType}{Document}
 }
 
-\newboolean{Copyright}
-\setboolean{Copyright}{false}
-\DeclareOption{copyright}{%
-	\setboolean{Copyright}{true}
-}
-
-
-% This next bit could probably be made more elegant
-% Code for including Creative Commons licenses
-\newboolean{CCBY}
-\setboolean{CCBY}{false}
-\newboolean{CCBYSA}
-\setboolean{CCBYSA}{false}
-\newboolean{CCBYND}
-\setboolean{CCBYND}{false}
-% as of Januare 2009, the UA license grants the University the 
-% non-exclusive right to display and distribute your dissertation 
-% as an open access work and include it in the Networked
-% Digital Library of Theses and Dissertations (http://www.ndltd.org/).
-% UMI/ProQuest includes it in Dissertations Abstracts and makes copies
-% available for sale.  Therefore the NC licences are not compatible and
-% are not included here. (from a correspondence with Dan Lee
-% Interim Team Leader for Undergraduate Services and Copyright Librarian 
-% University of Arizona Libraries leed@u.library.arizona.edu 
-\DeclareOption{CC-BY}{%
-	\setboolean{CCBY}{true}
-}
-\DeclareOption{CC-BY-SA}{%
-	\setboolean{CCBYSA}{true}
-}
-\DeclareOption{CC-BY-ND}{%
-	\setboolean{CCBYND}{true}
-}
-
 \newboolean{GeneratedOn}
 \setboolean{GeneratedOn}{false}
 \DeclareOption{generatedon}{%
 	\setboolean{GeneratedOn}{true}
 } % This option puts the generation date on the titlepage.
-
 
 %% These next four options are for passing through to the book class.
 \DeclareOption{oneside}{%
@@ -115,7 +80,6 @@
 \DeclareOption*{%
 	\ClassWarning{uathesis}{Unknown option `\CurrentOption'}%
 } % A general warning for unknown options.
-
 
 \ExecuteOptions{oneside,openright} % this provides a default option list
 
@@ -139,7 +103,6 @@
 \usepackage{setspace}
 \doublespacing
 
-
 %% Set margins for the bulk of the dissertation (referred to as Body of Paper).
 %% There are only two pages that have different margins: the Title Page, 
 %% and the Statement by Author page.  Fortunately, their left and right
@@ -161,7 +124,6 @@
 % define tightlist
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-
 
 % Make sure that various key names are in all caps.
 \renewcommand{\partname}{PART}
@@ -479,85 +441,72 @@
 %%
 %% \maketitlepage{Title}{Author}{degree title}{Department}{y e a r}
 %%
-%% options are	#1 = Title
-%%				#2 = Author
-%%				#3 = degree title
-%%				#4 = Department
-%%				#5 = year
+%% options are	#1 = Department
+%%				#2 = year
 
-\newcommand{\maketitlepage}[2]{%
-
+\newcommand{\maketitlepage}[2]{
 % This bracket begins an unnamed environment in which we will temporarily
 % override the document's page style.
-{
-\thispagestyle{empty}				% no page number on title page
-\renewcommand{\baselinestretch}{1}	% single spaced here
-\small\normalsize					% size switch to make the spacing behave
+    {
+        \thispagestyle{empty}				% no page number on title page
+        \renewcommand{\baselinestretch}{1}	% single spaced here
+        \small\normalsize					% size switch to make the spacing behave
+        
+        \vspace*{0.75in}	% This accounts for the larger top margin.  You'd think
+        \begin{center}		%	this would be 1in, but that pushes it down too far?
+        {\large\MakeUppercase{\CompleteTitle}}	% Title text
+        
+        \bigskip
+        
+        \bigskip
+        
+        by
+        
+        \bigskip
+        
+        \FullName							% Author
+        \vspace{1in}
+        
+        \rule{2in}{1pt}\\
 
-\vspace*{0.75in}	% This accounts for the larger top margin.  You'd think
-\begin{center}		%	this would be 1in, but that pushes it down too far?
-{\large\MakeUppercase{\CompleteTitle}}	% Title text
-
-\bigskip
-
-\bigskip
-
-by
-
-\bigskip
-
-\FullName							% Author
-\vspace{1in}
-
-\rule{2in}{1pt}\\
-\ifthenelse{ \boolean{Copyright} }	% This puts in the Copyright statement
-{Copyright \copyright\ \FullName\ #2}{}	
-% Creative Commons licenses	
-\ifthenelse{\boolean{CCBY}}{\by}{}		
-\ifthenelse{\boolean{CCBYSA}}{\bysa}{}		
-\ifthenelse{\boolean{CCBYND}}{\bynd}{}		
-
-Copyright \copyright\ \FullName\ #2 % NICK COPIED THIS TO HERE TO FULFILL REQUEST FROM FORMATTING POLICE
-
-\vspace{0.75in}
-
-A \ThesisType\ Submitted to the Faculty of the
-
-\bigskip
-
-\MakeUppercase{#1}					% Department
-
-\bigskip
-
-In Partial Fulfillment of the Requirements\\
-For the Degree of
-
-\bigskip
-
-\MakeUppercase{\DegreeName}					% Degree Title
-
-\ifdefined\DegreeMajor						% Degree major, JS added 3/2017
-WITH A MAJOR IN \MakeUppercase{\DegreeMajor}
-%\bigskip
-\else
-\fi
-
-\bigskip
-
-In the Graduate College
-
-\bigskip
-
-THE UNIVERSITY OF ARIZONA
-
-\vfill
-\ifthenelse{ \boolean{GeneratedOn} }
-{This draft was generated on \today.}
-{#2}								% Year
-\vspace{0.5in} % This accounts for the 0.5in larger bottom margin on this page.
-\end{center}
-}
-
+        Copyright \copyright\ \FullName\ #2 % NICK COPIED THIS TO HERE TO FULFILL REQUEST FROM FORMATTING POLICE
+        
+        \vspace{0.75in}
+        
+        A \ThesisType\ Submitted to the Faculty of the
+        
+        \bigskip
+        
+        \MakeUppercase{#1}					% Department
+        
+        \bigskip
+        
+        In Partial Fulfillment of the Requirements\\
+        For the Degree of
+        
+        \bigskip
+        
+        \MakeUppercase{\DegreeName}					% Degree Title
+        
+        \ifdefined\DegreeMajor						% Degree major, JS added 3/2017
+        WITH A MAJOR IN \MakeUppercase{\DegreeMajor}
+        %\bigskip
+        \else
+        \fi
+        
+        \bigskip
+        
+        In the Graduate College
+        
+        \bigskip
+        
+        THE UNIVERSITY OF ARIZONA
+        
+        \vfill
+        \MakeUppercase{#2}					% Department
+        \vspace{0.5in} % This accounts for the 0.5in larger bottom margin on this page.
+        \end{center}
+    }
 }
 
 %%---------------------------- Approval Form --------------------------
@@ -568,213 +517,80 @@ THE UNIVERSITY OF ARIZONA
 %%			#3	1st committee member's name
 %%			#4	2nd committee member's name
 %%			#5	3rd committee member's name
-%%			#6	4th committee member's name
-%%			#7	5th committee member's name
-
-\newcommand{\approval}[8]{%STEPH ADDED A COMMITTEE MEMBER
-
-{
-\renewcommand{\baselinestretch}{1}	% single spaced here
-\small\normalsize	
 
 
-
-
-
-
-\chapter*{THE UNIVERSITY OF ARIZONA\\GRADUATE COLLEGE}
-
-% making watermark for signature page
-% \AddToShipoutPictureBG*{\transparent{0.4}\includegraphics[width=0.9\textwidth]{figs/ua_block_rgb_3.png}}
-
-\AddToShipoutPictureBG*{
-    \put(0,0){
-        \parbox[b][\paperheight]{\paperwidth}{%
-            \vfill\centering
-            {\includegraphics[width=0.8\textwidth]{figs/ua_block_rgb_3 - faded.png}}%
-            \vfill
+\newcommand{\approval}[5]{
+    {
+        \renewcommand{\baselinestretch}{1}	% single spaced here
+        \small\normalsize	
+        
+        \chapter*{THE UNIVERSITY OF ARIZONA\\GRADUATE COLLEGE}
+        
+        % making watermark for signature page
+        % \AddToShipoutPictureBG*{\transparent{0.4}\includegraphics[width=0.9\textwidth]{figs/ua_block_rgb_3.png}}
+        
+        \AddToShipoutPictureBG*{
+            \put(0,0){
+                \parbox[b][\paperheight]{\paperwidth}{%
+                    \vfill\centering
+                    {\includegraphics[width=0.8\textwidth]{figs/ua_block_rgb_3 - faded.png}}%
+                    \vfill
+                }
+            }
         }
+        
+        As members of the Dissertation Committee, we certify that we have read the \MakeLowercase{\ThesisType} prepared by \FullName, titled \CompleteTitle~and recommend that it be accepted as fulfilling the \MakeLowercase{\ThesisType} requirement for the Degree of \DegreeName. 
+        
+        \vfill
+        
+        \bigskip
+        \begin{flushleft}
+        \begin{tabular*}{\textwidth}{p{4in}@{\extracolsep{\fill}}l}
+        	& Date: #1	\\
+        \cline{1-1}
+        #2  \emph{(Chair)}	& 			\\
+        	&			\\
+        	&			\\
+        	& Date: #1	\\
+        
+        \cline{1-1}
+        #3 \emph{(Member)}	& 			\\
+        	&			\\
+        	&			\\
+        	& Date: #1	\\
+        \cline{1-1}
+        #4  \emph{(Member)}	& 			\\
+        	& 			\\
+        	& 			\\
+        	& Date: #1	\\
+        \cline{1-1}
+        #5 \emph{(Member)}	& 			\\
+        \end{tabular*}
+        \end{flushleft}
+        
+        \vfill
+        
+        \noindent Final approval and acceptance of this \MakeLowercase{\ThesisType} is
+        contingent upon the candidate's submission of the final copies of the
+        \MakeLowercase{\ThesisType} to the Graduate College. \\ % NICK ADDED THIS NEWLINE
+        
+        \noindent I hereby certify that I have read this \MakeLowercase{\ThesisType} prepared
+        under my direction and recommend that it be accepted as fulfilling the 
+        \MakeLowercase{\ThesisType} requirement.
+        
+        \vfill
+        
+        \bigskip
+        \begin{flushleft}
+        \begin{tabular*}{\textwidth}{p{4in}@{\extracolsep{\fill}}l}
+        							& Date: #1	\\
+        \cline{1-1}
+        #2	&			\\
+        Dissertation Committee Chair &			\\
+        \DegreeMajor &			
+        \end{tabular*}
+        \end{flushleft}
     }
-}
-
-As members of the Dissertation Committee, we certify that we have read the \MakeLowercase{\ThesisType} prepared by \FullName, titled \CompleteTitle~and recommend that it be accepted as fulfilling the \MakeLowercase{\ThesisType} requirement for the Degree of \DegreeName. % NICK EDITED THIS LINE
-
-% Before the final oral defense you must obtain the Approval Pages
-% from the Degree Certification Office. Original signatures are
-% required on both final copies.  That means print out the Approval
-% Forms (one for each copy of the \ThesisType) on the nice acid-free
-% paper and get original signatures on each one.  Do this at your
-% defense to keep from having to do another signature round-up later
-% on.
-
-\vfill
-
-\bigskip
-\begin{flushleft}
-\begin{tabular*}{\textwidth}{p{4in}@{\extracolsep{\fill}}l}
-	& Date: #1	\\
-\cline{1-1}
-#3  \emph{(Chair)}	& 			\\
-	&			\\
-	&			\\
-	& Date: #1	\\
-
-\cline{1-1}
-#4 \emph{(Member)}	& 			\\
-	&			\\
-	&			\\
-	& Date: #1	\\
-\cline{1-1}
-#5  \emph{(Member)}	& 			\\
-	& 			\\
-	& 			\\
-	& Date: #1	\\
-\cline{1-1}
-#6 \emph{(Member)}
-\end{tabular*}
-\end{flushleft}
-
-\vfill
-
-\noindent Final approval and acceptance of this \MakeLowercase{\ThesisType} is
-contingent upon the candidate's submission of the final copies of the
-\MakeLowercase{\ThesisType} to the Graduate College. \\ % NICK ADDED THIS NEWLINE
-
-\noindent I hereby certify that I have read this \MakeLowercase{\ThesisType} prepared
-under my direction and recommend that it be accepted as fulfilling the 
-\MakeLowercase{\ThesisType} requirement.
-
-\vfill
-
-\bigskip
-\begin{flushleft}
-\begin{tabular*}{\textwidth}{p{4in}@{\extracolsep{\fill}}l}
-							& Date: #1	\\
-\cline{1-1}
-#2	&			\\
-Dissertation Committee Chair &			\\
-\DegreeMajor &			
-
-\end{tabular*}
-\end{flushleft}
-}
-
-}
-
-
-%%---------------------------- Statement by Author --------------------
-%% \statementbyauthor
-%%
-
-\newcommand{\statementbyauthor}[1][\emph{Put your Thesis Director's name and title into square brackets, [], after the statementbyauthor command}]{
-
-%% This bracket begins an unnamed environment in which we will temporarily
-%% override the document's page style.
-{
-\renewcommand{\baselinestretch}{1}	% single spaced here
-\small\normalsize					% size switch to make the spacing behave
-
-% The vspace in the chapter command below accounts for the extra 1in of 
-% margin at the top needed for this page (total should be 2.5in).
-\chapter*{\vspace*{1in}STATEMENT BY AUTHOR}
-
-
-This \MakeLowercase{\ThesisType} has been submitted in partial
-fulfillment of requirements for an advanced degree at the University
-of Arizona and is deposited in the University Library to be made
-available to borrowers under rules of the Library.
-
-\bigskip
-
-\noindent Brief quotations from this \MakeLowercase{\ThesisType} are allowable
-without special permission, provided that accurate acknowledgment
-of source is made.  
-\ifthenelse{ \boolean{Copyright} }
-{Requests for permission for extended quotation
-from or reproduction of this manuscript in whole or in part may be
-granted by the copyright holder.}
-{\ifthenelse{ \boolean{CCBY} }
-{This work is licensed under the Creative Commons Attribution 3.0 
-United States License. To view a copy of this license, visit 
-\href{http://creativecommons.org/licenses/by/3.0/us/}
-{http://creativecommons.org/licenses/by/3.0/us/} or send a letter to 
-Creative Commons, 171 Second Street, Suite 300, San Francisco, 
-California, 94105, USA.} 
-{\ifthenelse{ \boolean{CCBYSA} }
-{This work is licensed under the Creative Commons Attribution-Share 
-Alike 3.0 United States License. To view a copy of this license, visit
-\href{http://creativecommons.org/licenses/by-sa/3.0/us/}
-{http://creativecommons.org/licenses/by-sa/3.0/us/} or send a letter to 
-Creative Commons, 171 Second Street, Suite 300, San Francisco, 
-California, 94105, USA.  }
-{\ifthenelse{ \boolean{CCBYND} }
-{This work is licensed under the Creative Commons Attribution-No 
-Derivative Works 3.0 United States License. To view a copy of this 
-license, visit \href{http://creativecommons.org/licenses/by-nd/3.0/us/}
-{http://creativecommons.org/licenses/by-nd/3.0/us/} or send a letter to 
-Creative Commons, 171 Second Street, Suite 300, San Francisco, 
-California, 94105, USA.  }
-	{Requests for permission for extended quotation from or reproduction 
-   of this manuscript in whole or in part may be granted by the head of 
-   the major department or the Dean of the Graduate
-	College when in his or her judgment the proposed use of the
-	material is in the interests of scholarship.  In all other
-	instances, however, permission must be obtained from the
-	author.}
-}}}
-
-\vspace{1in}
-
-\begin{flushleft}
-\begin{tabular*}{\textwidth}{p{2.5in}@{\extracolsep{\fill}}rp{2.5in}}
-\ifthenelse{ \equal{\ThesisType}{Thesis} }
-{
-							& SIGNED:	& 	\\
-\cline{3-3}
-							&			& \hfill \FullName	\\
-} {
-							& SIGNED:	& \FullName	\\
-}
-\end{tabular*}
-\end{flushleft}
-
-% If this is a Thesis, we need a permission and date statement.
-\ifthenelse{ \equal{\ThesisType}{Thesis} }
-{
-\vfill
-\begin{center}
-APPROVAL BY THESIS DIRECTOR
-
-\bigskip
-
-This thesis has been approved on the date shown below:
-
-\vspace{0.75in}
-
-\begin{minipage}[t]{4in}
-\begin{center}
-\hrulefill
-
-#1
-%Jane M. Doe\\
-%Professor of Chemistry
-\end{center}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{1.75in}
-\begin{center}
-\hrulefill
-
-Date
-\end{center}
-\end{minipage}
-
-
-\end{center}
-}
-
-}
-
 }
 
 %%---------------------------- Acknowledgements -----------------------
@@ -786,22 +602,11 @@ Date
 %%
 
 \newcommand{\incacknowledgements}[1]{
-
-% This bracket begins an unnmaed environment in which we will temporarily
-% override the document's page style.
-{
-\renewcommand{\baselinestretch}{1}	% single spaced here
-\small\normalsize					% size switch to make the spacing behave
-
-\chapter*{ACKNOWLEDGEMENTS}
-
-\InputIfFileExists{#1}
-	{\typeout{Including your file #1.tex as the acknowledgements.}}
-	{Couldn't find #1.tex to include as your acknowledgements.}
-
+    \chapter*{ACKNOWLEDGEMENTS}
+    \InputIfFileExists{#1}
+    	{\typeout{Including your file #1.tex as the acknowledgements.}}
+    	{Couldn't find #1.tex to include as your acknowledgements.}
 }
-}
-
 
 %%---------------------------- Dedication -----------------------------
 %%
@@ -812,35 +617,11 @@ Date
 %%
 
 \newcommand{\incdedication}[1]{
-
-\chapter*{DEDICATION}
-
-\InputIfFileExists{#1}
-	{\typeout{Including your file #1.tex as the dedication.}}
-	{Couldn't find #1.tex to include as your dedication.}
-
+    \chapter*{DEDICATION}
+    \InputIfFileExists{#1}
+    	{\typeout{Including your file #1.tex as the dedication.}}
+    	{Couldn't find #1.tex to include as your dedication.}
 }
-
-%%---------------------------- Abstract -------------------------------
-%%
-%% This command includes the file that contains the abstract.
-%%
-%% \incabstract
-%% Option is #1 = abstract file name
-%%
-
-\newcommand{\incabstract}[1]{
-
-\chapter*{ABSTRACT}
-% removed abstract from TOC
-\addcontentsline{toc}{chapter}{ABSTRACT} 
-
-\InputIfFileExists{#1}
-	{\typeout{Including your file #1.tex as the abstract.}}
-	{Couldn't find #1.tex to include as your abstract.}
-
-}
-
 
 %%---------------------------- Table of Contents ----------------------
 %% 
@@ -950,4 +731,22 @@ Date
 \clearpage
 \addtolength{\headsep}{-0.5in}		% Un-adjust things for the running
 \addtolength{\textheight}{0.5in}	% headers for TOC, LOF, LOT.
+}
+
+%%---------------------------- Abstract -------------------------------
+%%
+%% This command includes the file that contains the abstract.
+%%
+%% \incabstract
+%% Option is #1 = abstract file name
+%%
+
+\newcommand{\incabstract}[1]{
+    \chapter*{ABSTRACT}
+    % removed abstract from TOC
+    \addcontentsline{toc}{chapter}{ABSTRACT} 
+    
+    \InputIfFileExists{#1}
+    	{\typeout{Including your file #1.tex as the abstract.}}
+    	{Couldn't find #1.tex to include as your abstract.}
 }
