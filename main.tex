@@ -43,6 +43,9 @@
 
 \addbibresource{thesis.bib} % add a bib-reference file
 
+% Create numbered hypotheses
+\usepackage{ntheorem}
+\newtheorem{hyp}{Hypothesis} 
 
 % Compatibility with the AASTEX package 
 % of the American Astronomical Society.
@@ -133,12 +136,13 @@
 {Corey M. Abramson}	    % 1st committee member
 {Daniel E. Martinez}	% 2nd committee member
 {Yotam Shmargad}		% 3rd committee member
+{}
 
 % % Include the ``Acknowledgements''
 \incacknowledgements{acknowledgements}
 
 % Include the ``Dedication''
-\incdedication{dedication}
+% \incdedication{dedication}
 
 % Create a ``Table of Contents''
 \tableofcontents
