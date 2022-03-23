@@ -1,16 +1,14 @@
 \hypertarget{paper-1}{%
 \chapter{Digital Trace Data as Indicators of the Social World: Validating Google Trends for use in Scientific Research}\label{paper-1}}
 
-% TODO: should I add in some figures to outline these relationships? 
-
 \section{Abstract}
 
 Computational social science and disciplines such as sociology and
-political science are quick to 
-adopt new sources of digital trace data for use in academic research. 
+political science are often quick to adopt new sources of digital 
+trace data for use in academic research. 
 In this article, I examine the validity of Google Search Trends 
 as potential indicators of three different cases, namely attitudes, 
-disease prevalence and political preferences using eight %TODO double check number
+disease prevalence and political preferences using five
 different validated data sources. I use Pearson and Repeated Measures Correlations 
 between the Google Trends and the validated indicators as well as multiple linear regression
 (for cross-sectional datasets) and random intercept hierarchical linear models
@@ -27,13 +25,18 @@ will find no replacement for high quality survey data with Google Trends.
 
 \section{Introduction}
 
-% TODO define big data sources , are we just talking about digital trace data? what is that? Define, even if as footnote. Are 10K pages of field notes big data? Admin data with millions of observations but no text? 
-
-% TODO Define digital trace data. I  assume remnants of digital activity archived by corporate or state entities.
-
-New big data sources have led to vast possibilities for social science
-research because they are bigger, cheaper, and already available
+New sources of digital trace data have led to vast possibilities for social science
+research because they are bigger, cheaper, and already available 
 \citep{kingEnsuringDataRichFuture2011,lazerComputationalSocialScience2009,salganikBitBitSocial2017}.
+Digital trace data are the expansive volumes of information that are now available with the
+introduction and widespread adoption of the internet and include sources such as  
+social media sites, search data, blogs, adminstrative data on websites, the internet 
+archives, etc. In short, digital trace data are the crumbs that are left as a person
+peruses and interacts in digital spaces. Scholars have noted that these data provide
+many new research avenues for social scientists because they are always on, non-reactive to
+a researcher's observation, and very often captual social interactions and relationships,
+but warn they can be Inaccessible, Non-Representative, and be prone to drifting due to
+algorithmic confounding \citep{salganikBitBitSocial2017}.
 Before overenthusiastically embracing these
 sources and integrating them into our big data toolkits, social scientists must clearly establish
 parameters under which these data sources are appropriate, 
@@ -50,7 +53,7 @@ reliable sources of big data. As an example,\citet{blumenstockPredictingPovertyW
 use county-level cell-phone records to construct the distribution of poverty
 and wealth in Rwanda, a country where national surveys and censuses are
 rare and costly. However, \citet{blumenstockPredictingPovertyWealth2015} go to
-great lengths to demonstrate that their operationalization of the cell
+great lengths to demonstrate that their use of the cell
 phone data creates a reliable and valid construct; few social science
 papers utilizing big data dig into the construct validity of their
 metrics to this extent and even fewer publications focus on
@@ -63,16 +66,12 @@ metric may void any research insight we can pull from such data
 \subsection{Google Trends}
 
 Social scientists have yet to widely utilize Google Search Trends as a source of big data.
-Google Trends is an open data resource
-% TODO Does this just mean free and publicly available?
-
+Google Trends is a free and publicly accessible data resource
 provided by Google, a major internet search
 engine worldwide, that analyzes the top search queries across different localities, 
 languages, and time. While Google Trends is freely available and holds a breadth of 
 online activities that could potentially be of use in social science, few social 
-scientists outside of economics have used this resource \citep[see][for examples]{choi2012predicting, jun2018ten,da2011search}. This paper provides evidence-based guidelines for social scientist who would use these resources in their toolboxes on how we can operationalize 
-% TODO: operationalize debated
-Google Search Trends
+scientists outside of economics have used this resource \citep[see][for examples]{choi2012predicting, jun2018ten,da2011search}. This paper provides evidence-based guidelines for social scientist who would use these resources in their toolboxes on how we can triangulate Google Search Trends
 as validated indicators and under what circumstances.
 
 Building on prior research outlining the various issues with different sources of big data
@@ -83,17 +82,19 @@ These three cases will be tested using attitudinal indicators from the %NORC Gen
 CDC \citeyearpar{vaches_data} and New York Times \citeyearpar{mask_data}, 
 health indicators from the CDC \citeyearpar{suic_data}, 
 US cases rates of COVID-19 from The New York Times \citeyearpar{covid_data},  
-and political indicators from the historical US Presidential Election results \citeyearpar{pres_data}, 
-and the American National Election Survey \citeyearpar{anes_data}. This paper will contribute guidance for creating standards of how to use Google
+and political indicators from the historical US Presidential Election results \citeyearpar{pres_data}.
+% , and the American National Election Survey \citeyearpar{anes_data}.
+This paper will contribute guidance for creating standards of how to use Google
 Trends for social research, and identify potential pitfalls that can compromise the 
-analysis including 1. a lack of ecological validity, 2: poor 
-% TODO finish this sentence, This is the framework I would use for identifying ‘best practices.’ I would personally just say here is how this can go wrong, here is how you avoid it, and next steps. I could see doing a critical spin off for a place like big data and society.
+analysis including the focus of this paper, which shows that Google Trends has a
+lack of ecological validity. 
+
 
 \subsection{Google Trends and research on attitudes}
 
 I will use three categorizations of ways I propose Google Trends could
-be operationalized for social scientific usage. First, I test Google
-Trends as an operationalization of attitudinal indicators. 
+be utilized for social scientific usage. First, I test Google
+Trends as an indicator of attitudinal indicators. 
 After \citet{bailCulturalEnvironmentMeasuring2014}'s call for
 cultural sociologists to utilize the ever-expanding world of big data,
 Google trends began slowly appearing as a data source in sociological and
@@ -102,14 +103,13 @@ protest and anti-Muslim sentiment \citep{bailUsingInternetSearch2018,barrieSearc
 to analyzing country-level changes in social perception \citep{reyes_etal18},
 Google search trends are a new and innovative indicator of cultural interest.
 Extending into social networks and culture, \citet{bailPrestigeProximityPrejudice2019}
-even used Google trends to measure how 'culture' spreads around the globe.
-% TODO I’ll just say, while I think there is utility here, it is a very particular aspect of culture in a specific populations. I think we are still in the era where the bigness and newness can overshadow truth value.
+even used Google trends to measure how they saw 'culture' spreads around the globe
+through the proliferation of search terms.
+
 \subsection{Google Trends and research on health behaviors}
 
 Google Search Trends have been utilized to estimate disease prevalence
-and population health in journals like the Journal of
-Medical Internet Research. While much of this research has focused on
-% TODO I think this may erode your point about increasing legitimacy. If you said JAMA or NEJM, that would be a stronger example. If not, I’d just point to some specific projects then say new journals have emerged but that does not indicate mainstream acceptance…
+and population throughout the health sciences. While much of this research has focused on
 the COVID-19 pandemic \citep{jimenez_etal20, jimenezCOVID19SymptomGoogle2020, limEstimatingInformationSeekingBehaviour2020, mavraganiCOVID19PredictabilityUnited2020, nguyenGoogleTrendsAnalysis2020, todorovaInternetBasedData2021, mingUnderstandingHealthCommunication2021},
 other research has investigated Google Trends as indicators of wellbeing
 \citep{brodeurCOVID19LockdownsWellbeing2021, carpiTwitterSubjectiveWellBeing2020, duCOVID19IncreasesOnline2020},
@@ -131,12 +131,13 @@ political elections and political attitudes
 \citep{wolfTrendingRightDirection2018}. For instance,
 \citet{swearingenGoogleInsightsSenate2014} investigate how U.S. Senate
 Elections relate to attention measured by search traffic.
-\citet{prado-romanGoogleTrendsPredictor2020} demonstrate how Google Search trends
+\citet{pradoromanGoogleTrendsPredictor2020} demonstrate how Google Search trends
 successfully predicts presidential election results in both the United
 States and Canada. Finally, the OECD Development Centre is investigating
 how Google data can help elucidate governments' approval in Latin
-America \citep{montoyaUsingGoogleData2020}. 
-% TODO what are the results of these papers? do they show promise? 
+America \citep{montoyaUsingGoogleData2020}. Overall, the papers 
+cited here find favorable relationships between Google Trends and
+voting outcomes and claim that it is also a valid measure of public attention. 
 
 \subsection{Causes for concern}
 
@@ -156,32 +157,37 @@ serious causes than behavioral changes among the population or changes in the un
 
 \citet{cebrian_domenech22} emphasize in their research that there are some 
 non-negligible issues with the measurement of Google Trends, pointing to 
-errors within the purview of accuracy, completeness, consistency, and validity
-% TODO I know it is basic stats, but I would provide a footnote explaining each of your terms. Here, these line up with mainline stats but disciplines vary.
-
-\citep{KarrDataQuality}. \citet{cebrian_domenech22} point not only to 
+errors within the purview of accuracy, completeness, consistency, and validity,
+as outlined in \citet{KarrDataQuality}.  
+% I know it is basic stats, but I would provide a footnote explaining each of your terms. Here, these line up with mainline stats but disciplines vary.
+ \citet{cebrian_domenech22} point not only to 
 meta issues like the lack of transparency into the sampling methods 
 and population coverage, but they identify real differences 
 in the data provided by the Google Trends API for the same 
-researcher-entered query, pointing 
-to likely internal process used by Google to sample their data to compute the trends.
+researcher-entered query, pointing to likely internal process 
+used by Google to sample their data to compute the trends.
 These authors show that the variability of the results over time for the same query
-can alter the results of analysis and forecasting significantly; they propose
-caution in the use of the digital trace data for other researchers until
-further research can determine the cause for the inaccuracies. 
-% TODO Yes, big issue. But, it is also seen in machine learning, survey administration, etc. I’d assume one solution for dealing with fiddly output is to just sample repetedly and do some sort of average, perhaps with a correction if the direction of the error is non random.
+can alter the results of analysis and forecasting significantly. While the 
+issue of unreliability isn't unique to the Google Trends API, 
+\citet{cebrian_domenech22} propose 
+caution in the use of this digital trace data for other researchers until
+further research can determine the root cause for the inaccuracies.
+% Yes, big issue. But, it is also seen in machine learning, survey 
+% administration, etc. I’d assume one solution for dealing with fiddly 
+% output is to just sample repetedly and do some sort of average, 
+% perhaps with a correction if the direction of the error is non random.
 
 Finally, it is important to note that most of the research using 
 Google Trends as digital trace data do so to indicate
 population's \textit{attention} to a search query. Because
-% TODO I’d also say, the population is examined differently. It is really a population of action remnants being used to get at a population of people, which is presumed to be represented online.
+% I’d also say, the population is examined differently. It is really a population of action remnants being used to get at a population of people, which is presumed to be represented online.
 searches can be done with many different intentions, such as 
 information gathering, navigational purposes, etc., it may
 be hard to declare that an overall level of engagement with a topic
 on Google Search may be indicative of anything more than interest \citep{da2011search}.
 To reference Clifford Geertz's invocation of Ryle, we only know that the search was 
 performed, not whether it indicated a digital wink or twitch \citeyearpar{geertz1973thick}.
-%TODO CITE above, For a soc audience some sort of reference to the dilemma of interpretation would be interesting.
+% For a soc audience some sort of reference to the dilemma of interpretation would be interesting.
 
 \citet{jungherr_etal17} explore this topic deeply with data from
 Twitter on German federal election candidates and find that there is no
@@ -199,9 +205,14 @@ support using the methods that follow.
 
 \section{Methods}
 
-%TODO There are a lot of validities here. Be precise and explain what you are concretely examining. define which validity here 
-To investigate the construct and criterion validity of the use of Google Trends
-in these three areas, I gathered geo-located social science data across multiple
+To test how well Google Trends can be used to indicate other measures, 
+I use various tests to validate the criterion validity of the trends. 
+Criterion validity measures how well one measure, an operationalization of a 
+specific construct, is able to predict a theoretical representation 
+of the construct — the criterion. For this article, I employ 
+concurrent criterion validity which looks at how Google Trends can
+predict various criterions in the same time scale. 
+I gathered geo-located social science data across multiple
 sources to address the three areas of inquiry for this paper.  Table
 \ref{tab:data-sources-table} outlines which data sources I use in this
 project and which trends are matched to each source.
@@ -242,8 +253,7 @@ missing datapoints in the longitudinal datasets using The Zoo package for R \cit
 
 \subsubsection{Attitudinal}
 
-% TODO create a  table People will want to see a table of variables, their prompts, and ranges.
-
+%  create a  Table People will want to see a Table of variables, their prompts, and ranges.
 
 % <!-- \citep{gss_data} (let's see if I get access first) -->
 
@@ -275,7 +285,7 @@ retrieve U.S. county-level COVID-19 rates from \citet{covid_data}, who compile t
 data based on reports from state and local health agencies. It is widely
 acknowledged that there are biases in this data due to inconsistencies and
 availability in testing as well as different community propensity to test
-% TODO Also blatant political interference in some places, which is probably worth acknowledging.
+%  Also blatant political interference in some places, which is probably worth acknowledging.
 \citep{gu22, cdc20a} However, it is the best measure we have of actual case rates
 without extensive adjustments.
 Case Rate is measured as number of cases per 100,000 population. Observations
@@ -292,7 +302,7 @@ cases, resulting from 10 observations of 3,147 counties. Missing data were inter
 
 \subsubsection{Political}
 
-Finally, I evaluate Google Trends as an operationalization of political
+Finally, I evaluate Google Trends as an indicator of political
 attitudes by first looking at actual voting outcomes in historical US
 Presidential Election results. This data comes from  \citet{pres_data}, who scraped the
 results from Townhall.com, Fox News, Politico, and the New York Times. Data on 
@@ -300,21 +310,21 @@ presidential outcomes were available for 3,147 counties in 2016 and
 3,118 counties in 2020. Each variable measures the percent of votes
 for the candidate, with the lowest percent at 3.09\% and the highest at 92.15\%.
 
-In addition, I use data on political opinions from the American National
-Election Survey 2020 Time-Series Study \citep{anes_data}. This data is paired with
-restricted data provided by ICPSR, the Inter-university Consortium for Political
-and Social Research, which contains the geo-ids of the 5,441
-survey respondents. The study interviewed respondents in a pre-election survey
-that was conducted between August 18, 2020, and the day of the US Presidential
-election, November 3, 2020.  %TODO
-I will write about actual variables when my data extract request is approved. 
+% In addition, I use data on political opinions from the American National
+% Election Survey 2020 Time-Series Study \citep{anes_data}. This data is paired with
+% restricted data provided by ICPSR, the Inter-university Consortium for Political
+% and Social Research, which contains the geo-ids of the 5,441
+% survey respondents. The study interviewed respondents in a pre-election survey
+% that was conducted between August 18, 2020, and the day of the US Presidential
+% election, November 3, 2020.  %TODO
+% I will write about actual variables when my data extract request is approved. 
 
-% TODO: WHICH VARIABLES
-% TODO: VARIABLE SCALE
+% % TODO: WHICH VARIABLES
+% % TODO: VARIABLE SCALE
 
 \subsubsection{Other}
 
-In addition to specific measures of interest, I also gathered vadata on potentially
+In addition to specific measures of interest, I also gathered data on potentially
 confounding variables. The first Seven of these
 variables come from the 2010-2019 5-year American Community Surveys
 \citep{acs2019, acs2018, acs2017, acs2016, acs2015, acs2014, acs2013, acs2012, acs2011, acs2010}. 
@@ -354,24 +364,28 @@ To address longitudinal correlations, I employ Repeated Measures Correlation
 using the \texttt{rmcorr} package in \texttt{r} \citep{bland1995, bakdash2017}. 
 Repeated Measures Correlation is useful for determining the within-county
 association for paired measures across time and counties. Results of these 
-correlations are in table \ref{tab:corr-results}.
+correlations are in Table \ref{tab:corr-results}.
 
 As an additional criteria to evaluate the strength of the relationships, 
 I employ multiple linear regression
-(for cross-sectional datasets) and random intercept hierarchical linear models
+(for cross-sectional datasets) and fixed effect hierarchical linear models
 \citep{pinheiro_etal21} (for longitudinal datasets) to identify the strength of
-relationships across locales.
-%TODO This all sounds fine to me, but I’m less up to date on model specification and nesting, so I’m not the best to ask. I would also specify why these models are appropriate in one sentence max because methods people about these things. Also,they may have sampling assumptions the data violate so clarifying that that is not an issue may be necessary.   
-I include location metadata like county population size,
+relationships across locales. Multiple linear regression is appropriate because 
+the cross-sectional data are non-nested which a continous outcome. Hierarchical
+linear models are necessary to control for the between-subject variation 
+in the longitudinal models. Fixed models are appropriate because 
+they extract the between group-differences from the model to allow the reader to 
+focus on the overall effects of each variable. 
+In these models, include location metadata like county population size,
 broadband rates, and median income to adjust for potentially
 confounded relationships between Google search Trends and credible
 indicators. Identifying these possible confounded relationships may help to
 explain why some articles find relationships between the trends and outcomes
 while others did not.
-% TODO Why? To have a standardized net impact? Sociologists usually have a strong negative reaction to this. In contrast, in psych they do this with everything.  
 For linear regression models, I normalize independent
-variables; in other words, variables have been centered and scaled to have a mean of zero and
-standard deviation of one. Results of these models are in tables \ref{tab:vacc_hes_analysis} through \ref{tab:pres_2020_analysis}.
+variables so that each variable across each model is on the same scale and can be compared. 
+In other words, variables have been centered and scaled to have a mean of zero and
+standard deviation of one. Results of these models are in Tables \ref{tab:vacc_hes_analysis} through \ref{tab:pres_2020_analysis}.
 
 \section{Results}
 
@@ -388,7 +402,7 @@ different Google Search Trends, the correlation does not exceed -0.4657
 weak according to the common standards. With only one correlation 
 above that threshold, I conclude that the overall trends are at best weakly
 correlated with these attitudes. When running these
-correlations in multiple linear regression (see the results in table
+correlations in multiple linear regression (see the results in Table
 \ref{tab:vacc_hes_analysis}), I see an $r^2$ of 0.233 (Model 1),
 indicating that the Google Trends explains about 23\% of
 the variation in Vaccine Hesitancy alone. Demographic characteristics like the
@@ -404,6 +418,11 @@ significant and remain significant when controlling for demographics. This reinf
 % I Wonder if something like a box plot showing how estimates would vary for a question like—did people say they were against masks--might be useful.
 
 \input{tables/paper1/vacc_hes_analysis}
+\begin{figure}[h]
+{\centering \includegraphics[width=0.8\linewidth]{figs/paper1/vacc_hes_plot-1.pdf}}
+\caption{Vaccine hesitancy by each Google Trend with a fitted linear regression line}\label{fig:vacc_hes_plot}
+\end{figure}
+
 
 The second attitudinal measure I test is how Google Trends relates to rare mask
 usage. As with vaccine hesitancy, the Pearson correlations are negligible.
@@ -423,6 +442,11 @@ Trends data cannot replace survey analysis when trying to measure rare mask
 usage.
 
 \input{tables/paper1/mask_analysis}
+\begin{figure}[h]
+{\centering \includegraphics[width=0.8\linewidth]{figs/paper1/mask_plot-1.pdf}}
+\caption{Rare mask usage by each Google Trend with a fitted linear regression line}\label{fig:mask_plot-1}
+\end{figure}
+
 
 \subsection{Validating Google Trends as metrics of health outcomes}
 
@@ -435,7 +459,7 @@ coefficient, a more reliable and less biased measure for longitudinal
 correlations, reveals similarly weak results with a maximum correlation of 0.32
 between 'smell loss' and rates of COVID-19. To further investigate the relationship, I
 include the three trends in random intercept hierarchical linear models. Model 1
-of table \ref{tab:covid_analysis} indicates that the trends themselves are able
+of Table \ref{tab:covid_analysis} indicates that the trends themselves are able
 to explain about 20\% of the variation in COVID-19 rates ($r^2$ = 0.201). Few
 of the demographic variables influence COVID-19 rates in models 2 or 3,
 though there is some suppression for median income, unemployment rates,
@@ -445,13 +469,17 @@ is weak, and we should not attempt to use Google Trends as an indicator of actua
 health outcomes.
 
 \input{tables/paper1/covid_analysis}
+\begin{figure}[h]
+{\centering \includegraphics[width=0.8\linewidth]{figs/paper1/covid_plot-1.pdf}}
+\caption{Covid case rate for 09-14-2020 by each Google Trend with a fitted linear regression line}\label{fig:covid_plot-1}
+\end{figure}
 
 Another health outcome I test is county suicide rates. As with previous cases,
 there is only negligible correlation between actual suicide rates and Google
 Search Trends, not exceeding 0.0845. In the more accurate repeated measures
 correlation coefficient we see a maximum of 0.142 correlation, remaining
 negligible. I introduce these trends into a random intercept model to control
-for inter-group variation over time in table \ref{tab:suicide_analysis}. While
+for inter-group variation over time in Table \ref{tab:suicide_analysis}. While
 table \ref{tab:suicide_analysis} model 1 reveals a statistically significant relationship
 between suicide hotline trends and suicide rates, the effect is small, and the
 entire model only has an $r^2$ of 0.058. Adding in demographic features in model
@@ -461,6 +489,10 @@ compared to model 2. These analyses lead me to conclude that Google Search
 Trends should not be used by researchers as indicators of suicide rates or intentions.
 
 \input{tables/paper1/suicide_analysis}
+\begin{figure}[h]
+{\centering \includegraphics[width=0.8\linewidth]{figs/paper1/suicide_plot-1.pdf}}
+\caption{Suicide death rate for 2019 by each Google Trend with a fitted linear regression line}\label{fig:suicide_plot-1}
+\end{figure}
 
 \subsection{Validating Google Trends as metrics of political support}
 
@@ -472,7 +504,7 @@ correlation with the actual percentage of votes for either candidate. In 2020,
 results are even less related, with searches for neither Joe Biden nor Donald
 Trump holding any real correlation with the 2020 results.
 
-In table \ref{tab:pres_2016_analysis}, I outline the results for the model
+In Table \ref{tab:pres_2016_analysis}, I outline the results for the model
 predicting the county percentage of votes for Hillary Clinton. Model 1
 demonstrates how well Google Trends predict the votes; while the
 trend for 'Hillary Clinton' is significantly associated with votes, the model's
@@ -481,10 +513,15 @@ variance. On the other hand, adding in demographic features improves the model
 fit quite well, bringing the $r^2$ up to 0.313 in model 2 and $r^2$ 0.327 in
 model 3. Table \ref{tab:pres_2020_analysis} shows this same analysis for the
 2020 election and predicts the percentage of votes for Joe Biden. While this
-model is analogous to those in table \ref{tab:pres_2016_analysis}, this
+model is analogous to those in Table \ref{tab:pres_2016_analysis}, this
 model 1 demonstrates how unrelated Google Trends can be from actual outcomes. In
 conclusion, I find that Google Trends are an unreliable and invalid indicator of
 political support.
+
+\begin{figure}[h]
+{\centering \includegraphics[width=0.8\linewidth]{figs/paper1/pres_plot-1.pdf}}
+\caption{Presidential voting outcomes for 2016 and 2020 by each Google Trend with a fitted linear regression line}\label{fig:pres_plot-1}
+\end{figure}
 
 \input{tables/paper1/pres_2016_analysis}
 \input{tables/paper1/pres_2020_analysis}
@@ -501,7 +538,7 @@ political support.
 % A related thought, is the assumption is the survey is right, since it is the referrant for validation. But often, the validation procedures of surveys can also lead to invalid claims. Cicourel wrote about this really well in 1982, and there are examples where a measure means totally different things to different respondents. E..g Alcohol may be read as ‘spiritis’ but not wine by some groups. So, it is possible that google is more accurate, and all these data sources require validation from interactions with humans in their lifeworld. That would be my position at least, but I think it is fair to say that the while the surveys have been more thoroughly tested, there are potential errors there as well.
 
 
-This paper provides a critique of Google Trends for use in Social Science. 
+This paper provides a test of the criterion validity of Google Trends for use in Social Science. 
 I failed to find correlation between the Google Trends and their 
 validated indicators. While some Google Trends tested were significantly 
 associated with the outcome in the linear regression model, effects tended
@@ -525,14 +562,3 @@ of the data that we use so we can be confident in our research findings. As with
 source of data, we must consider the potential pitfalls, especially in research on 
 using new methods and data sources \citep{mcfarlandBigDataDanger2015}.
 In the case of Google Search Trends, precaution is warranted.
-
-% While I would like to be able to join \citet{bailCulturalEnvironmentMeasuring2014} 
-% in encouraging social scientists to pursue more research with the many new sources of big data, 
-% I emphasize that testing out data to verify what it actually corresponds to is an essential step 
-% to making impactful research as a discipline going forward.  
-
-% TODO I like this, but it is out of place tone-wise. It fits better in a critical piece or blog. I’d say something like in these cases, GT fails validation tests, and caution future research is warranted. Future research should determine its utility using empirical criteria rather than a prior assumptions. Triangulation, using various data sources, is necessary.
-
-% A stronger case, if you wanted to go in calling out the big data evangelicals, would be to show that their own work does not replicate or those measures are invalid. 
-
-% Some of this is based in logical errors and some is based in the politics, and there are different ways to treat that.
