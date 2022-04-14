@@ -1,8 +1,6 @@
-\hypertarget{paper-3}{%
-\chapter{Social Norms under Uncertain Times: A dynamic study of Stay-At-Home and Vaccination Rates During the COVID-19 Pandemic}\label{paper-3}}
+\hypertarget{paper-3}{\chapter{Social Norms under Uncertain Times: A dynamic study of Stay-At-Home and Vaccination Rates During the COVID-19 Pandemic}\label{paper-3}}
 
-\hypertarget{abstract-1}{%
-\section{Abstract}\label{abstract-1}}
+\hypertarget{abstract-1}{\section{Abstract}\label{abstract-1}}
 
 My final article takes a deeper dive into the formation of social norms
 governing health behaviors in cases of extreme uncertainty using the cases of
@@ -10,13 +8,13 @@ both stay-at-home rates and vaccination rates as responses to public health
 recommendations to mitigate the COVID-19 pandemic. Using theories like
 associative diffusion and the integrated theoretical framework of norms, I test
 models of behavioral adaption to public health recommendations and patterns of
-complex contagion (the need for repeated exposures to a something novel for it
+complex contagion (the need for repeated exposures to something novel for it
 to diffuse) using linear mixed effects models. These models show that complex
 contagion is a valid framework for the social contagion of new norms during
 COVID-19. Importantly, I find a novel moderating effect of signal discordance,
 the contextual diversity of signals received by an ego. If there is diversity in
 the information received by an ego, contagion is less likely to occur. This
-paper shows that the contagion process cannot be not fully understood without
+paper shows that the contagion process cannot be fully understood without
 looking at the context of each exposure to a contagion within the range of
 contagions one experiences.
 
@@ -89,7 +87,9 @@ complex contagion, associative diffusion and the integrated theoretical
 framework of norms, I test how these health behaviors are outcomes of contagion
 and discordance of signals, as well as other factors affecting associations like
 religious and political conservatism, attention to television media sources, and
-online norms as measured by information-search behaviors. Before outlining my
+online norms as measured by information-search behaviors.
+
+Before outlining my
 central hypotheses, I offer an overview of the current state of the social
 contagion literature. After that, I will outline how I compiled this unique
 longitudinal data set from Google, the CDC, Facebook and other sources and how I
@@ -102,7 +102,7 @@ formation of social norms.
 
 \hypertarget{the-social-contagion-model}{\subsection{The Social Contagion Model}\label{the-social-contagion-model}}
 
-Individuals engage with each other and their distributive ties to create
+Individuals engage with each other and their distributed ties to create
 community contexts where norms, beliefs, and values circulate. These clusters of
 interaction are called social networks, and if ``each person continues to
 interact primarily with others nearby in space, the forces of conformity will be
@@ -117,7 +117,7 @@ opinions spread \citep{bond_etal12,
 fowler2010cooperative,klarEffectNetworkStructure2017}, behaviors are adopted
 \citep{aralExerciseContagionGlobal2017, centolaSpreadBehaviorOnline2010,
 centolaExperimentalStudyHomophily2011,christakis2008collective,rosenquist2010spread},
-and there are patterns of health contagion
+and there are patterns of health contagion 
 \citep{cacioppo2009alone,christakisSpreadObesityLarge2007}. However, ``different
 things spread in different ways and to different extents'' \citep[p.
 563]{christakisSocialContagionTheory2013} and when modeling diffusion and
@@ -130,7 +130,7 @@ but the adoption of culture and specific deviant behaviors \citep[see][for an
 exception]{centolaSpontaneousEmergenceConventions2015}.
 \citet{dellapostaWhyLiberalsDrink2015} outline how the spread of culture and
 behavior is tied to network autocorrelation, or ``the tendency for people to
-resemble their network neighbors.'' They show that the distance between to
+resemble their network neighbors.'' They show that the distance between two
 agents in sociocultural space can determine the likelihood of the adoption of a
 new behavior. Like \citet{axelrodDisseminationCultureModel1997}, this outlines
 how the local convergence of close network actors becomes amplified and can lead
@@ -155,7 +155,7 @@ health measures according to this older model.
 
 \hypertarget{complex-contagion-and-discordance}{\subsection{Complex Contagion and Discordance}\label{complex-contagion-and-discordance}}
 
-\citep{centolaComplexContagionsWeakness2007} theorize that simple contagions are
+\citet{centolaComplexContagionsWeakness2007} theorize that simple contagions are
 not enough to spread behavioral change. Simple contagions are those in which
 only one point of contact is needed to receive contagion, like with infectious
 disease or to learn simple bits of information. Centola and Macy
@@ -176,6 +176,7 @@ hypothesis:
 \begin{hyp2}[H\ref{hyp:direction}] \label{hyp:direction}
 Increased average time spent in residence (signal direction) from alters will have a positive effect on stay-at-home rates the ego-county; increased vaccine uptake by alters will have a positive effect on vaccine uptake for the ego-county
 \end{hyp2}
+% TODO I think I ``get'' this, but could you define ``ego county''? Also, why not just look at the effect of alter's behavior on ego's behavior (why does the county come into the framework)? Do you mean {the subset of ego's alters who live in the same county as ego}?
 
 To make the contagion more complex, different sources of exposure
 (county-alters) adhere to CDC recommendations to stay-at-home at differing
@@ -185,12 +186,12 @@ concordance with each other, the signal to the ego is reinforced and more
 impactful on the ego. When these signals are mixed with high variance from
 different sources, agreement is low and makes the behavioral change less likely.
 For this paper, I theorize that a new concept of `discordance' must be
-considered as impacting complex contagion. discordance is the variance of
+considered as impacting complex contagion. Discordance is the variance of
 signals received by an alter; high discordance prevents reinforcement while low
 discordance (concordance) enables complex contagion. Instead of adopting a
 `majority' rules attitude, this means that the more discordance perceived by an
 ego, the less likely the alters will have any effect on the ego. I theorize that
-the behavior of a county-alter will be positively correlated with the behavior
+the behavior of a county-alter will be correlated with the behavior
 of another county-ego if the county-ego receives highly discordant signals, as
 seen in Figure \ref{fig:dag}.
 
@@ -203,8 +204,7 @@ The effect of signal direction on time spent in residence and vaccine uptake wil
 \caption{Elaboratory Theoretical Model of Health Behavior Norms}\label{fig:dag}
 \end{figure}
 
-\hypertarget{associative-diffusion}{%
-\subsection{Associative Diffusion}\label{associative-diffusion}}
+\hypertarget{associative-diffusion}{\subsection{Associative Diffusion}\label{associative-diffusion}}
 
 While much of the social contagion literature, like the theories above, focuses
 on structural boundaries and homophily as causes of how diffusion occurs,
@@ -271,6 +271,7 @@ following sections before diving into modeling specifications.
 \hypertarget{stay-at-home-rates}{\subsection{Stay-at-Home Rates}\label{stay-at-home-rates}}
 
 \input{tables/paper3/google-desc-table}
+%TODO define normalization, make sure its mentioned in the methods section
 
 \begin{figure}
 {\centering \includegraphics[width=0.8\linewidth]{figs/paper3/plot-google-1}}
@@ -292,7 +293,7 @@ a mobile phone, b) with a Google account, and c) with knowledge of how to
 synchronize their location history. Google has not made it clear whether there
 are any weights in place to correct for these potential biases. Google
 calculates the relative change in mobility in comparison to the median value of
-movement in the area for the same the corresponding day of the week, during the
+movement in the area for the same corresponding day of the week, during the
 5-week period Jan 3--Feb 6, 2020. As Google did not provide data on certain US
 counties if they did not have sufficient statistically significant levels of
 data, my final county sample is \emph{n} = 1375 (compared to the total
@@ -304,8 +305,7 @@ average of stay-at-home rates for each county (rolling window width = 7 days)
 and then sampling every Monday in the sample for 44 measures from March 02, 2020
 through December 28, 2020.
 
-\hypertarget{covid-vaccination-uptake}{%
-\subsection{COVID vaccination uptake}\label{covid-vaccination-uptake}}
+\hypertarget{covid-vaccination-uptake}{\subsection{COVID vaccination uptake}\label{covid-vaccination-uptake}}
 
 \input{tables/paper3/vacc-desc-table}
 
@@ -313,6 +313,7 @@ through December 28, 2020.
 {\centering \includegraphics[width=0.8\linewidth]{figs/paper3/plot-vacc-1}}
 \caption{Vaccination Rates over Time}\label{fig:plot-vacc}
 \end{figure}
+% TODO add which counties rose to 100% vaccination 
 
 The second dependent variable aims to operationalize vaccination uptake through
 vaccination rate information in the United States from January 2021 through
@@ -333,11 +334,9 @@ rolling mean with a rolling window width of seven days to smooth out intra-week
 noise. I sample every Monday between January 2021 through August 30, 2021 for 35
 total observations for each county.
 
-\hypertarget{independent-variables-1}{%
-\subsection{Independent Variables}\label{independent-variables-1}}
+\hypertarget{independent-variables-1}{\subsection{Independent Variables}\label{independent-variables-1}}
 
-\hypertarget{network-signal}{%
-\subsubsection{Network Signal}\label{network-signal}}
+\hypertarget{network-signal}{\subsubsection{Network Signal}\label{network-signal}}
 
 I utilize the likelihood of a friendship connection between counties to create a
 county-level social network weighted by the probability of a tie. Using this
@@ -371,8 +370,7 @@ distance \citep{Kuchler2020}.
 signal = \frac{\sum_{i=1}^nw_ix_i}{\sum^n_{i=1}w_i} \label{eq:networksignal}
 \end{equation}
 
-\hypertarget{signal-discordance}{%
-\subsubsection{Signal Discordance}\label{signal-discordance}}
+\hypertarget{signal-discordance}{\subsubsection{Signal Discordance}\label{signal-discordance}}
 
 The second independent variable, \emph{Signal Discordance}, builds on the
 network signal but looks specifically at the extent to which a given ego-network
@@ -401,6 +399,7 @@ discordance meaning the signal of vaccination rate is reinforced, Navajo County,
 Arizona receives very diverse signals from their county-alters, negating any
 contagion effects. Figure \ref{fig:discordancenetwork} explicitly outline how
 the weights and signals are calculated for an ego with only 5 alters.
+% TODO Navajo County, AZ, is probably a good one to talk about. Suppose it's composed of Native and non-Native communities, which are not in much communication with each other. Each (Native and non-Native) might have connections to different sets of alter counties. In brief: There could be a lot of homogeneity among non-Natives and a lot of homogeneity among Natives, but both might be masked by taking county as the unit. Thoughts? the assumption of homogeneity within county  (my comment on p. 120) should be stated clearly.
 
 \begin{figure}
 {\centering \includegraphics[width=0.7\linewidth]{figs/paper3/assortativity-vacc-1}}
@@ -412,15 +411,14 @@ the weights and signals are calculated for an ego with only 5 alters.
   \begin{equation}
     w = \begin{bmatrix}0.0000015\\0.0000023\\0.0000527\\0.0000966\\0.0001119\end{bmatrix},  
     x = \begin{bmatrix}29.9\\20.4\\27.7\\24.6\\24.3\end{bmatrix} \longrightarrow
-    \begin{matrix} \bar{x}*, signal = 25.083\\ s*, discordance = 1.41 \end{matrix} 
+    \begin{matrix} \bar{x}*, signal = 25.083\\ s*, discordance = 1.423 \end{matrix} 
   \end{equation}
   \caption{How Network Signal and Discordance are Calculated, Mathematical Example}
   \label{fig:discordancenetwork}
   \end{center}
 \end{figure}
 
-\hypertarget{COVID-19-case-rates}{%
-\subsubsection{COVID-19 Case Rates}\label{COVID-19-case-rates}}
+\hypertarget{COVID-19-case-rates}{\subsubsection{COVID-19 Case Rates}\label{COVID-19-case-rates}}
 
 To estimate the concept of `real threat of infection' for a fear-based model of
 health behaviors, the models use county-level COVID-19 case rates with data
@@ -465,8 +463,7 @@ rescaling ratio by the cross-sectional value. Rescaled longitudinal data was
 compared against time-series data for multiple test counties and was equivalent.
 For a more in-depth explanation of this procedure, see \citet[p. 5]{park_etal}.
 
-\hypertarget{pillars-of-convervatism}{%
-\subsubsection{Pillars of Convervatism}\label{pillars-of-convervatism}}
+\hypertarget{pillars-of-convervatism}{\subsubsection{Pillars of Convervatism}\label{pillars-of-convervatism}}
 
 Research has shown that stay-at-home rates and other pandemic health behaviors
 are related to various `pillars of conservatism'
@@ -485,15 +482,16 @@ Religion Census: Religious Congregations and Membership Study
 \citep{grammich_etal18}. Finally, right-wing media consumption is assessed using
 Google Search Trends to capture ``Fox News'' searches over the study period
 across individual designated media markets areas (DMAs). I use this measure to
-indicate active interest in and attention toward Fox News. Google Search Trends
+indicate active interest in and attention toward Fox News. While Google Search Trends
 have been validated for use in a range of research contexts and for use with
 survey data, voting data, and ecological data
 \citep{bailPrestigeProximityPrejudice2019, reyesUsingInternetSearch2018,
 scheitleGoogleInsightsSearch2011, stephensdavidowitzCostRacialAnimus2014,
-swearingenGoogleInsightsSenate2014}.
+swearingenGoogleInsightsSenate2014}, I provide a caution for these uses in 
+\hyperlink{paper-1}{Appendix A} and suggest these measures should only be used to measure attention. 
 
-\hypertarget{demographics}{%
-\subsubsection{Demographics}\label{demographics}}
+
+\hypertarget{demographics}{\subsubsection{Demographics}\label{demographics}}
 
 These models also control for (1) percent of the population that is above 65
 years old (those most at risk of hospitalization), (2) percent of the population
@@ -503,8 +501,7 @@ through 4 are obtained from the 2018 American Community Survey: 5-Year Estimates
 \citep{uscensusbureauAmericanCommunitySurvey2018}; unemployment rates are
 gathered from the U.S. Bureau of Labor Statistics \citep{labor2020a}.
 
-\hypertarget{analysis-and-results}{%
-\section{Analysis and Results}\label{analysis-and-results}}
+\hypertarget{analysis-and-results}{\section{Analysis and Results}\label{analysis-and-results}}
 
 My analytic strategy proceeds in four steps. In Tables
 \ref{tab:google-desc-table} (Stay-at-Home) and \ref{tab:vacc-desc-table}
@@ -518,7 +515,7 @@ linear models that contain both random and fixed effects. These models treat the
 dependent variables as continuous. The following strategies I will outline are
 identical for both case studies. Models 1 through 3 address hypotheses
 \ref{hyp:infection} through \ref{hyp:discordance} respectively. Each model
-utilizes normalized independent variables, i.e. variables that have been
+utilizes normalized independent variables, i.e.\ variables that have been
 centered and scaled to have a mean of 0 and standard deviation 1. The first
 model is a baseline linear mixed effects model that employs all basic controls
 to predict the dependent variable, allowing both time-varying and county-level
@@ -527,9 +524,9 @@ the county-level exogenous effects are controlled for when estimating the
 coefficient. In addition, models are specified with a random intercept per
 county. The lme models are set with a autoregressive correlation structure
 (\texttt{correlation\ =\ corAR1()}) to control for temporally autocorrelated
-error structures; models are also optimized using Nelder--Mead, quasi-Newton and
-conjugate-gradient algorithms for box-constrained optimization and simulated
-annealing (\texttt{control\ =\ lmeControl(opt\ =\ "optim")}). This first model
+error structures; models are also optimized using Nelder--Mead, quasi--Newton and
+conjugate--gradient algorithms for box-constrained optimization and simulated
+annealing (\texttt{control\ =\ lmeControl(opt\ =\ ``optim'')}). This first model
 will address Hypothesis \ref{hyp:infection}. To test Hypothesis
 \ref{hyp:direction}, I estimate model 2 which builds on model 1 by first
 introducing vaccination signal. Because the signal varies by week, I estimate
@@ -542,7 +539,7 @@ discordance and an interaction term between signal and discordance. Figures
 \ref{fig:plot-google-h3} and \ref{fig:plot-vacc-h3} depict just how signal and
 discordance interact across these two cases.
 
-\hypertarget{stay-at-home-rate-results}{%
+\hypertarget{stay-at-home-rate-results}{
 \subsection{Stay-at-Home Rate results}\label{stay-at-home-rate-results}}
 
 \input{tables/paper3/google-tab}
@@ -623,14 +620,13 @@ influence effect is almost completely moderated because there is no clear story
 or norm forming. However, under low discordance, the signal is condensed,
 allowing for social influence to have an effect. Explicitly, if a county is
 receiving a wide array of low and high signals, their stay-at-home rates won't
-be affected by social contagion. When a signal is concentrated or in agreement,
+be affected on average by social contagion. When a signal is concentrated or in agreement,
 the theoretical effect of movement signaling on the ego are the strongest. With
 this, I am able to reject the null hypothesis of no relationship for Hypothesis
 \ref{hyp:discordance} and find that the effect of signal direction on time spent
 in residence is moderated by diversity in signals.
 
-\hypertarget{vaccination-rate-results}{%
-\subsection{Vaccination Rate results}\label{vaccination-rate-results}}
+\hypertarget{vaccination-rate-results}{\subsection{Vaccination Rate results}\label{vaccination-rate-results}}
 
 \input{tables/paper3/vacc-tab}
 
@@ -648,7 +644,9 @@ unemployment and higher votes for Donald J. Trump in the 2020 election are
 associated with lower vaccination rates. Interestingly, counties that search for
 Fox News are more likely to have higher vaccination rates while those performing
 Google searches for information about the vaccine are likely to have lower rates
-of vaccination. The test of Hypothesis \ref{hyp:infection} also returns
+of vaccination. 
+% TODO On the Fox News result--Interesting. In hindsight, this too may have to do with inhomogeneities within counties, e.g., maybe it's the conservatives in liberal counties that tune in avidly to Fox News.
+The test of Hypothesis \ref{hyp:infection} also returns
 surprising results: every 1 standard deviation increase in county COVID-19 case
 rates is expected to yield a -0.008 decrease in vaccination rates. This may be
 due to time ordering or reverse causality, where individuals in counties who
@@ -660,6 +658,9 @@ the addition of Vaccination Signal and Vaccination Discordance in models 2 and
 once a third (distorter) variable is controlled, in this case, those related to
 signal. Therefore, the results of Hypothesis \ref{hyp:infection} are quite
 inconclusive.
+% TODO Those who perform Google searches for vaccine info are likely to have lower vaccination rates --> Maybe they are searching for info about why the vaccine is bad !!
+
+% TODO An increase in covid cases yields a decrease in vaccination rates. -- Well, the association would be like this if low vaccination rates lead to more covid cases.
 
 \begin{figure}
 {\centering \includegraphics[width=0.8\linewidth]{figs/paper3/plot-vacc-h2-1}}
@@ -714,8 +715,7 @@ Rates for Hypothesis \ref{hyp:discordance}, I also reject the null hypothesis
 and find a moderation of the relationship between signal direction and vaccine
 uptake by discordance.
 
-\hypertarget{discussion-and-conclusion}{%
-\section{Discussion and Conclusion}\label{discussion-and-conclusion}}
+\hypertarget{discussion-and-conclusion}{\section{Discussion and Conclusion}\label{discussion-and-conclusion}}
 
 This paper examines how social norms are formed under conditions of uncertainty
 using the case studies of stay-at-home rates and vaccination rates during the
@@ -733,8 +733,9 @@ of a county is a good representation of the diversity in behaviors within that
 county. If stay-at-home rates are normally distributed, this is a correct
 assumption to make; however, little is known about each county's underlying
 distribution of behaviors that lead to the aggregate measures.
+% TODO As perhaps illustrated hypothetically in my comment on p. 120
 
-Regardless of limitations, this article is a unique and compelling contribution
+Despite limitations, this article is a unique and compelling contribution
 to the academic study of social contagion and social norms. First, this article
 demonstrates that it is possible to link, at least at a community level,
 information search by individuals, social relationships, and observed health
