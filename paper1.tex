@@ -51,10 +51,14 @@ using reliable sources of big data. As an
 example,\citet{blumenstockPredictingPovertyWealth2015} use county-level
 cell-phone records to construct the distribution of poverty and wealth in
 Rwanda, a country where national surveys and censuses are rare and costly.
-However, \citet{blumenstockPredictingPovertyWealth2015} go to great lengths to
-demonstrate that their use of the cell phone data creates a reliable and valid
-construct; few social science papers utilizing big data dig into the construct
-validity of their metrics to this extent and even fewer publications focus on
+In this paper,  \citet{blumenstockPredictingPovertyWealth2015} put in an effort to 
+investigate the criterion validity of their measure; that is, they investigate 
+how well an \textit{operationalization} of a specific construct is able to 
+predict a \textit{theoretical representation} of the construct — the criterion. 
+Investigating the criterion validity in their paper demonstrate that their use
+of the cell phone data creates a reliable and valid construct. 
+Few other social science papers utilizing big data dig into the criterion
+validity of their metrics to this extent;even fewer publications focus on
 methodological guidelines of how to use sources of big data \citep[For
 exceptions, see ][]{asseoTrackingCOVID19Using2020,
 stilesAssessingCriterionValidity2018}. However, research has shown the small
@@ -77,7 +81,7 @@ circumstances.
 
 Building on prior research outlining the various issues with different sources
 of big data \citep{boydCriticalQuestionsBig2012,lazerIssuesConstructValidity2015}, this
-paper evaluates the construct validity of Google Search Trends as an indicator
+paper evaluates the criterion validity of Google Search Trends as an indicator
 of three different cases, namely attitudes, disease prevalence and political
 preferences. These three cases will be tested using attitudinal indicators from
 the CDC \citeyearpar{vaches_data} and New York Times \citeyearpar{mask_data}, 
@@ -89,8 +93,8 @@ Presidential Election results \citeyearpar{pres_data}.
 This paper will contribute
 guidance for creating standards of how to use Google Trends for social research,
 and identify potential pitfalls that can compromise the analysis including the
-focus of this paper, which shows that Google Trends has a lack of ecological
-validity.
+focus of this paper, which shows that Google Trends has a lack of criterion validity
+for multiple ways which researchers may want to use it.
 
 
 \subsection{Google Trends and research on attitudes}
@@ -264,7 +268,10 @@ value, multiply the respective week's rescaling ratio by the cross-sectional
 value. To validate this method, I compared the rescaled longitudinal data
 against multiple samples of time-series data. For a more in-depth explanation of
 this procedure, see \citet[p. 5]{park_etal}}. I interpolate missing data points
-in the longitudinal datasets using The Zoo package for R \citep{zoo}.
+in the longitudinal datasets using The Zoo package for R \citep{zoo} which estimates
+the values of missing data points based on the immediately preceding and succeeding
+time points for each separate time-series group. This differs from multiple imputation, 
+which would take other features into account when estimating the missing data point. 
 
 \subsubsection{Attitudinal}
 
